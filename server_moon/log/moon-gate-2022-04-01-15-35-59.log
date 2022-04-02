@@ -1,0 +1,43 @@
+2022-04-01 15:35:59.407 | 8964      | INFO  | INIT with 6 workers.
+2022-04-01 15:35:59.407 | 8964      | INFO  | WORKER-1 RUN
+2022-04-01 15:35:59.408 | 8964      | INFO  | WORKER-2 RUN
+2022-04-01 15:35:59.408 | 1820      | INFO  | WORKER-1 START
+2022-04-01 15:35:59.408 | 8964      | INFO  | WORKER-3 RUN
+2022-04-01 15:35:59.408 | 16816     | INFO  | WORKER-2 START
+2022-04-01 15:35:59.408 | 8964      | INFO  | WORKER-4 RUN
+2022-04-01 15:35:59.409 | 17940     | INFO  | WORKER-3 START
+2022-04-01 15:35:59.409 | 8964      | INFO  | WORKER-5 RUN
+2022-04-01 15:35:59.409 | 24360     | INFO  | WORKER-4 START
+2022-04-01 15:35:59.409 | 8964      | INFO  | WORKER-6 RUN
+2022-04-01 15:35:59.409 | 23664     | INFO  | WORKER-5 START
+2022-04-01 15:35:59.410 | 1820      | INFO  |  new_service 16777217
+2022-04-01 15:35:59.410 | 740       | INFO  | WORKER-6 START
+2022-04-01 15:35:59.410 | 8964      | INFO  | server::run() state = 2
+2022-04-01 15:35:59.417 | 1820      | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+ (lua_service.cpp:107)
+2022-04-01 15:35:59.424 | :01000001 | INFO  | start server	(main.lua:14)
+2022-04-01 15:35:59.424 | :01000001 | INFO  | package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+	(main.lua:18)
+2022-04-01 15:35:59.424 | :01000001 | INFO  | G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua	(main.lua:26)
+2022-04-01 15:35:59.424 | 1820      | ERROR | lua_service::init error:
+run main.lua:31: module 'server_config' not found:
+	no field package.preload['server_config']
+	no file './lualib/server_config.lua'
+	no file './wmlualib/server_config.lua'
+	no file ''
+	no file 'G:\ddd\moon_example\server_moon\server_config.dll'
+	no file 'G:\ddd\moon_example\server_moon\..\lib\lua\5.4\server_config.dll'
+	no file 'G:\ddd\moon_example\server_moon\loadall.dll'
+	no file '.\server_config.dll'
+stack traceback:
+	[C]: in function 'require',	 params:
+	main.lua:31: in main chunk,	 params: moon = table: 000002D507027FB0; p = package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+; path = ./lualib/?.lua;./wmlualib/?.lua;(lua_service.cpp:111). (lua_service.cpp:126)
+2022-04-01 15:35:59.424 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-01 15:35:59.426 | 740       | INFO  | WORKER-6 STOP
+2022-04-01 15:35:59.426 | 23664     | INFO  | WORKER-5 STOP
+2022-04-01 15:35:59.426 | 24360     | INFO  | WORKER-4 STOP
+2022-04-01 15:35:59.426 | 17940     | INFO  | WORKER-3 STOP
+2022-04-01 15:35:59.426 | 16816     | INFO  | WORKER-2 STOP
+2022-04-01 15:35:59.426 | 1820      | INFO  | WORKER-1 STOP
+2022-04-01 15:35:59.426 | 8964      | INFO  | STOP

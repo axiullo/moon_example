@@ -1,0 +1,147 @@
+2022-04-01 16:24:28.602 | 21500     | INFO  | INIT with 6 workers.
+2022-04-01 16:24:28.602 | 21500     | INFO  | WORKER-1 RUN
+2022-04-01 16:24:28.603 | 21500     | INFO  | WORKER-2 RUN
+2022-04-01 16:24:28.603 | 25316     | INFO  | WORKER-1 START
+2022-04-01 16:24:28.603 | 21500     | INFO  | WORKER-3 RUN
+2022-04-01 16:24:28.603 | 1848      | INFO  | WORKER-2 START
+2022-04-01 16:24:28.603 | 21500     | INFO  | WORKER-4 RUN
+2022-04-01 16:24:28.603 | 22920     | INFO  | WORKER-3 START
+2022-04-01 16:24:28.603 | 21500     | INFO  | WORKER-5 RUN
+2022-04-01 16:24:28.604 | 9384      | INFO  | WORKER-4 START
+2022-04-01 16:24:28.604 | 21500     | INFO  | WORKER-6 RUN
+2022-04-01 16:24:28.604 | 7368      | INFO  | WORKER-5 START
+2022-04-01 16:24:28.604 | 25316     | INFO  |  new_service 16777217
+2022-04-01 16:24:28.604 | 3956      | INFO  | WORKER-6 START
+2022-04-01 16:24:28.604 | 21500     | INFO  | server::run() state = 2
+2022-04-01 16:24:28.611 | 25316     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+ (lua_service.cpp:107)
+2022-04-01 16:24:28.616 | :01000001 | INFO  | start server	(main.lua:14)
+2022-04-01 16:24:28.617 | :01000001 | INFO  | package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+	(main.lua:18)
+2022-04-01 16:24:28.617 | :01000001 | INFO  | G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua	(main.lua:26)
+2022-04-01 16:24:28.617 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-01 16:24:28.617 | 25316     | INFO  |  new_service 16777218
+2022-04-01 16:24:28.618 | 25316     | WARN  | @@@  package.path='./wmlualib/?.lua;'..package.path
+return {unique=true,host='0.0.0.0',port=20520,threadid=1,name='gate1',base_port=20520,file='service_gate.lua',base_name='gate',num=3,} (lua_service.cpp:107)
+2022-04-01 16:24:28.619 | 25316     | ERROR | lua_service::init error:
+run service_gate.lua:2: module 'moon' not found:
+	no field package.preload['moon']
+	no file './wmlualib/moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon\init.lua'
+	no file '.\moon.lua'
+	no file '.\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\..\lib\lua\5.4\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\loadall.dll'
+	no file '.\moon.dll'
+stack traceback:
+	[C]: in function 'require',	 params:
+	service_gate.lua:2: in main chunk,	 params: conf = table: 000001DBD2CB1B70;(lua_service.cpp:111). (lua_service.cpp:126)
+2022-04-01 16:24:28.619 | :01000002 | INFO  | [WORKER 1] destroy service [gate1] 
+2022-04-01 16:24:28.619 | 1848      | INFO  |  new_service 33554433
+2022-04-01 16:24:28.620 | 1848      | WARN  | @@@  package.path='./wmlualib/?.lua;'..package.path
+return {unique=true,host='0.0.0.0',port=20521,threadid=2,name='gate2',base_port=20520,file='service_gate.lua',base_name='gate',num=3,} (lua_service.cpp:107)
+2022-04-01 16:24:28.621 | 1848      | ERROR | lua_service::init error:
+run service_gate.lua:2: module 'moon' not found:
+	no field package.preload['moon']
+	no file './wmlualib/moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon\init.lua'
+	no file '.\moon.lua'
+	no file '.\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\..\lib\lua\5.4\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\loadall.dll'
+	no file '.\moon.dll'
+stack traceback:
+	[C]: in function 'require',	 params:
+	service_gate.lua:2: in main chunk,	 params: conf = table: 000001DBD2CB23F0;(lua_service.cpp:111). (lua_service.cpp:126)
+2022-04-01 16:24:28.621 | :02000001 | INFO  | [WORKER 2] destroy service [gate2] 
+2022-04-01 16:24:28.621 | 22920     | INFO  |  new_service 50331649
+2022-04-01 16:24:28.622 | 22920     | WARN  | @@@  package.path='./wmlualib/?.lua;'..package.path
+return {unique=true,host='0.0.0.0',port=20522,threadid=3,name='gate3',base_port=20520,file='service_gate.lua',base_name='gate',num=3,} (lua_service.cpp:107)
+2022-04-01 16:24:28.623 | 22920     | ERROR | lua_service::init error:
+run service_gate.lua:2: module 'moon' not found:
+	no field package.preload['moon']
+	no file './wmlualib/moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon\init.lua'
+	no file '.\moon.lua'
+	no file '.\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\..\lib\lua\5.4\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\loadall.dll'
+	no file '.\moon.dll'
+stack traceback:
+	[C]: in function 'require',	 params:
+	service_gate.lua:2: in main chunk,	 params: conf = table: 000001DBD2CB1B70;(lua_service.cpp:111). (lua_service.cpp:126)
+2022-04-01 16:24:28.623 | :03000001 | INFO  | [WORKER 3] destroy service [gate3] 
+2022-04-01 16:24:28.623 | 1848      | INFO  |  new_service 33554434
+2022-04-01 16:24:28.624 | 1848      | WARN  | @@@  package.path='./wmlualib/?.lua;'..package.path
+return {name='ingate1',port=20620,unique=true,base_port=20620,file='service_ingate.lua',host='127.0.0.1',base_name='ingate',num=2,} (lua_service.cpp:107)
+2022-04-01 16:24:28.625 | 1848      | ERROR | lua_service::init error:
+run service_ingate.lua:2: module 'moon' not found:
+	no field package.preload['moon']
+	no file './wmlualib/moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon\init.lua'
+	no file '.\moon.lua'
+	no file '.\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\..\lib\lua\5.4\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\loadall.dll'
+	no file '.\moon.dll'
+stack traceback:
+	[C]: in function 'require',	 params:
+	service_ingate.lua:2: in main chunk,	 params: conf = table: 000001DBD2C9BFE0;(lua_service.cpp:111). (lua_service.cpp:126)
+2022-04-01 16:24:28.625 | :02000002 | INFO  | [WORKER 2] destroy service [ingate1] 
+2022-04-01 16:24:28.625 | 1848      | INFO  |  new_service 33554435
+2022-04-01 16:24:28.626 | 1848      | WARN  | @@@  package.path='./wmlualib/?.lua;'..package.path
+return {name='ingate2',port=20621,unique=true,base_port=20620,file='service_ingate.lua',host='127.0.0.1',base_name='ingate',num=2,} (lua_service.cpp:107)
+2022-04-01 16:24:28.627 | 1848      | ERROR | lua_service::init error:
+run service_ingate.lua:2: module 'moon' not found:
+	no field package.preload['moon']
+	no file './wmlualib/moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\lua\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon.lua'
+	no file 'G:\ddd\moon_example\server_moon\..\share\lua\5.4\moon\init.lua'
+	no file '.\moon.lua'
+	no file '.\moon\init.lua'
+	no file 'G:\ddd\moon_example\server_moon\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\..\lib\lua\5.4\moon.dll'
+	no file 'G:\ddd\moon_example\server_moon\loadall.dll'
+	no file '.\moon.dll'
+stack traceback:
+	[C]: in function 'require',	 params:
+	service_ingate.lua:2: in main chunk,	 params: conf = table: 000001DBD2CB22F0;(lua_service.cpp:111). (lua_service.cpp:126)
+2022-04-01 16:24:28.627 | :02000003 | INFO  | [WORKER 2] destroy service [ingate2] 
+2022-04-01 16:24:31.168 | 21500     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-01 16:24:31.169 | :01000001 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 16:24:31.169 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-01 16:24:31.170 | 3956      | INFO  | WORKER-6 STOP
+2022-04-01 16:24:31.171 | 7368      | INFO  | WORKER-5 STOP
+2022-04-01 16:24:31.171 | 9384      | INFO  | WORKER-4 STOP
+2022-04-01 16:24:31.171 | 22920     | INFO  | WORKER-3 STOP
+2022-04-01 16:24:31.171 | 1848      | INFO  | WORKER-2 STOP
+2022-04-01 16:24:31.171 | 25316     | INFO  | WORKER-1 STOP
+2022-04-01 16:24:31.171 | 21500     | INFO  | STOP

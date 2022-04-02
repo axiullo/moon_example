@@ -1,0 +1,67 @@
+2022-04-01 15:05:53.594 | 7708      | INFO  | INIT with 6 workers.
+2022-04-01 15:05:53.594 | 7708      | INFO  | WORKER-1 RUN
+2022-04-01 15:05:53.595 | 7708      | INFO  | WORKER-2 RUN
+2022-04-01 15:05:53.595 | 14456     | INFO  | WORKER-1 START
+2022-04-01 15:05:53.595 | 7708      | INFO  | WORKER-3 RUN
+2022-04-01 15:05:53.595 | 6620      | INFO  | WORKER-2 START
+2022-04-01 15:05:53.596 | 7708      | INFO  | WORKER-4 RUN
+2022-04-01 15:05:53.596 | 23832     | INFO  | WORKER-3 START
+2022-04-01 15:05:53.596 | 7708      | INFO  | WORKER-5 RUN
+2022-04-01 15:05:53.596 | 7708      | INFO  | WORKER-6 RUN
+2022-04-01 15:05:53.596 | 25244     | INFO  | WORKER-4 START
+2022-04-01 15:05:53.597 | 26600     | INFO  | WORKER-5 START
+2022-04-01 15:05:53.601 | 14456     | INFO  |  new_service 16777217
+2022-04-01 15:05:53.601 | 14468     | INFO  | WORKER-6 START
+2022-04-01 15:05:53.602 | 7708      | INFO  | server::run() state = 2
+2022-04-01 15:05:53.608 | 14456     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+ (lua_service.cpp:107)
+2022-04-01 15:05:53.614 | :01000001 | INFO  | start server	(main.lua:14)
+2022-04-01 15:05:53.614 | :01000001 | INFO  | G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua	(main.lua:16)
+2022-04-01 15:05:53.614 | :01000001 | INFO  | package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+	(main.lua:26)
+2022-04-01 15:05:53.615 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-01 15:05:53.615 | 14456     | INFO  |  new_service 16777218
+2022-04-01 15:05:53.616 | 14456     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+return {file='service_gate.lua',threadid=1,base_name='gate',port=20520,num=3,host='0.0.0.0',name='gate1',base_port=20520,unique=true,} (lua_service.cpp:107)
+2022-04-01 15:05:53.622 | :01000002 | INFO  | gate server start	gate1	0.0.0.0	20520	(service_gate.lua:89)
+2022-04-01 15:05:53.622 | :01000002 | INFO  | [WORKER 1] new service [gate1]
+2022-04-01 15:05:53.622 | 6620      | INFO  |  new_service 33554433
+2022-04-01 15:05:53.623 | 6620      | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+return {file='service_gate.lua',threadid=2,base_name='gate',port=20521,num=3,host='0.0.0.0',name='gate2',base_port=20520,unique=true,} (lua_service.cpp:107)
+2022-04-01 15:05:53.625 | :02000001 | INFO  | gate server start	gate2	0.0.0.0	20521	(service_gate.lua:89)
+2022-04-01 15:05:53.625 | :02000001 | INFO  | [WORKER 2] new service [gate2]
+2022-04-01 15:05:53.625 | 23832     | INFO  |  new_service 50331649
+2022-04-01 15:05:53.626 | 23832     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+return {file='service_gate.lua',threadid=3,base_name='gate',port=20522,num=3,host='0.0.0.0',name='gate3',base_port=20520,unique=true,} (lua_service.cpp:107)
+2022-04-01 15:05:53.629 | :03000001 | INFO  | gate server start	gate3	0.0.0.0	20522	(service_gate.lua:89)
+2022-04-01 15:05:53.629 | :03000001 | INFO  | [WORKER 3] new service [gate3]
+2022-04-01 15:05:53.630 | 25244     | INFO  |  new_service 67108865
+2022-04-01 15:05:53.636 | 25244     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+return {name='ingate1',port=20620,file='service_ingate.lua',unique=true,host='127.0.0.1',num=2,base_port=20620,base_name='ingate',} (lua_service.cpp:107)
+2022-04-01 15:05:53.640 | :04000001 | INFO  | ingate server start	ingate1	127.0.0.1	20620	(service_ingate.lua:91)
+2022-04-01 15:05:53.640 | :04000001 | INFO  | [WORKER 4] new service [ingate1]
+2022-04-01 15:05:53.640 | 26600     | INFO  |  new_service 83886081
+2022-04-01 15:05:53.641 | 26600     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+return {name='ingate2',port=20621,file='service_ingate.lua',unique=true,host='127.0.0.1',num=2,base_port=20620,base_name='ingate',} (lua_service.cpp:107)
+2022-04-01 15:05:53.644 | :05000001 | INFO  | ingate server start	ingate2	127.0.0.1	20621	(service_ingate.lua:91)
+2022-04-01 15:05:53.644 | :05000001 | INFO  | [WORKER 5] new service [ingate2]
+2022-04-01 15:09:12.324 | 7708      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-01 15:09:12.324 | :01000001 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 15:09:12.324 | :05000001 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 15:09:12.324 | :01000002 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 15:09:12.324 | :04000001 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 15:09:12.324 | :03000001 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 15:09:12.325 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-01 15:09:12.325 | :05000001 | INFO  | [WORKER 5] destroy service [ingate2] 
+2022-04-01 15:09:12.325 | :04000001 | INFO  | [WORKER 4] destroy service [ingate1] 
+2022-04-01 15:09:12.325 | :03000001 | INFO  | [WORKER 3] destroy service [gate3] 
+2022-04-01 15:09:12.325 | :02000001 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 15:09:12.325 | :02000001 | INFO  | [WORKER 2] destroy service [gate2] 
+2022-04-01 15:09:12.326 | :01000002 | INFO  | [WORKER 1] destroy service [gate1] 
+2022-04-01 15:09:12.326 | 14468     | INFO  | WORKER-6 STOP
+2022-04-01 15:09:12.326 | 26600     | INFO  | WORKER-5 STOP
+2022-04-01 15:09:12.326 | 25244     | INFO  | WORKER-4 STOP
+2022-04-01 15:09:12.327 | 23832     | INFO  | WORKER-3 STOP
+2022-04-01 15:09:12.327 | 6620      | INFO  | WORKER-2 STOP
+2022-04-01 15:09:12.327 | 14456     | INFO  | WORKER-1 STOP
+2022-04-01 15:09:12.327 | 7708      | INFO  | STOP

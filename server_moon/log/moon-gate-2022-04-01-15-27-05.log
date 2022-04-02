@@ -1,0 +1,63 @@
+2022-04-01 15:27:05.727 | 3956      | INFO  | INIT with 6 workers.
+2022-04-01 15:27:05.727 | 3956      | INFO  | WORKER-1 RUN
+2022-04-01 15:27:05.728 | 3956      | INFO  | WORKER-2 RUN
+2022-04-01 15:27:05.730 | 14820     | INFO  | WORKER-1 START
+2022-04-01 15:27:05.731 | 3956      | INFO  | WORKER-3 RUN
+2022-04-01 15:27:05.731 | 18704     | INFO  | WORKER-2 START
+2022-04-01 15:27:05.731 | 3956      | INFO  | WORKER-4 RUN
+2022-04-01 15:27:05.732 | 10904     | INFO  | WORKER-3 START
+2022-04-01 15:27:05.732 | 3956      | INFO  | WORKER-5 RUN
+2022-04-01 15:27:05.732 | 17464     | INFO  | WORKER-4 START
+2022-04-01 15:27:05.732 | 3956      | INFO  | WORKER-6 RUN
+2022-04-01 15:27:05.733 | 17628     | INFO  | WORKER-5 START
+2022-04-01 15:27:05.733 | 24688     | INFO  | WORKER-6 START
+2022-04-01 15:27:05.733 | 14820     | INFO  |  new_service 16777217
+2022-04-01 15:27:05.734 | 3956      | INFO  | server::run() state = 2
+2022-04-01 15:27:05.741 | 14820     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+ (lua_service.cpp:107)
+2022-04-01 15:27:05.747 | :01000001 | INFO  | start server	(main.lua:14)
+2022-04-01 15:27:05.747 | :01000001 | INFO  | package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+	(main.lua:18)
+2022-04-01 15:27:05.747 | :01000001 | INFO  | ./wmlualib/?.lua	(main.lua:25)
+2022-04-01 15:27:05.747 | :01000001 | INFO  | ./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua	(main.lua:27)
+2022-04-01 15:27:05.748 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-01 15:27:05.748 | 14820     | INFO  |  new_service 16777218
+2022-04-01 15:27:05.749 | 14820     | WARN  | @@@  package.path='./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua;'
+return {port=20520,name='gate1',host='0.0.0.0',threadid=1,file='service_gate.lua',num=3,base_port=20520,base_name='gate',unique=true,} (lua_service.cpp:107)
+2022-04-01 15:27:05.749 | 14820     | ERROR | lua_service::init error:
+initialize [string "package.path='./wmlualib/?.lua;G:/ddd/moon_ex..."]:1: invalid escape sequence near ''./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\d'(lua_service.cpp:108). (lua_service.cpp:126)
+2022-04-01 15:27:05.749 | :01000002 | INFO  | [WORKER 1] destroy service [gate1] 
+2022-04-01 15:27:05.749 | 18704     | INFO  |  new_service 33554433
+2022-04-01 15:27:05.750 | 18704     | WARN  | @@@  package.path='./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua;'
+return {port=20521,name='gate2',host='0.0.0.0',threadid=2,file='service_gate.lua',num=3,base_port=20520,base_name='gate',unique=true,} (lua_service.cpp:107)
+2022-04-01 15:27:05.750 | 18704     | ERROR | lua_service::init error:
+initialize [string "package.path='./wmlualib/?.lua;G:/ddd/moon_ex..."]:1: invalid escape sequence near ''./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\d'(lua_service.cpp:108). (lua_service.cpp:126)
+2022-04-01 15:27:05.750 | :02000001 | INFO  | [WORKER 2] destroy service [gate2] 
+2022-04-01 15:27:05.750 | 10904     | INFO  |  new_service 50331649
+2022-04-01 15:27:05.751 | 10904     | WARN  | @@@  package.path='./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua;'
+return {port=20522,name='gate3',host='0.0.0.0',threadid=3,file='service_gate.lua',num=3,base_port=20520,base_name='gate',unique=true,} (lua_service.cpp:107)
+2022-04-01 15:27:05.751 | 10904     | ERROR | lua_service::init error:
+initialize [string "package.path='./wmlualib/?.lua;G:/ddd/moon_ex..."]:1: invalid escape sequence near ''./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\d'(lua_service.cpp:108). (lua_service.cpp:126)
+2022-04-01 15:27:05.751 | :03000001 | INFO  | [WORKER 3] destroy service [gate3] 
+2022-04-01 15:27:05.751 | 18704     | INFO  |  new_service 33554434
+2022-04-01 15:27:05.753 | 18704     | WARN  | @@@  package.path='./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua;'
+return {host='127.0.0.1',port=20620,name='ingate1',file='service_ingate.lua',unique=true,base_port=20620,base_name='ingate',num=2,} (lua_service.cpp:107)
+2022-04-01 15:27:05.753 | 18704     | ERROR | lua_service::init error:
+initialize [string "package.path='./wmlualib/?.lua;G:/ddd/moon_ex..."]:1: invalid escape sequence near ''./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\d'(lua_service.cpp:108). (lua_service.cpp:126)
+2022-04-01 15:27:05.753 | :02000002 | INFO  | [WORKER 2] destroy service [ingate1] 
+2022-04-01 15:27:05.753 | 18704     | INFO  |  new_service 33554435
+2022-04-01 15:27:05.754 | 18704     | WARN  | @@@  package.path='./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\ddd\moon_example\server_moon\lua\?.lua;G:\ddd\moon_example\server_moon\lua\?\init.lua;G:\ddd\moon_example\server_moon\?.lua;G:\ddd\moon_example\server_moon\?\init.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?.lua;G:\ddd\moon_example\server_moon\..\share\lua\5.4\?\init.lua;.\?.lua;.\?\init.lua;'
+return {host='127.0.0.1',port=20621,name='ingate2',file='service_ingate.lua',unique=true,base_port=20620,base_name='ingate',num=2,} (lua_service.cpp:107)
+2022-04-01 15:27:05.754 | 18704     | ERROR | lua_service::init error:
+initialize [string "package.path='./wmlualib/?.lua;G:/ddd/moon_ex..."]:1: invalid escape sequence near ''./wmlualib/?.lua;G:/ddd/moon_example/server_moon/lualib/?.lua;G:\d'(lua_service.cpp:108). (lua_service.cpp:126)
+2022-04-01 15:27:05.754 | :02000003 | INFO  | [WORKER 2] destroy service [ingate2] 
+2022-04-01 15:28:32.139 | 3956      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-01 15:28:32.139 | :01000001 | INFO  | ####### remove_service	(G:/ddd/moon_example/server_moon/lualib/moon.lua:213)
+2022-04-01 15:28:32.139 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-01 15:28:32.141 | 24688     | INFO  | WORKER-6 STOP
+2022-04-01 15:28:32.141 | 17628     | INFO  | WORKER-5 STOP
+2022-04-01 15:28:32.141 | 17464     | INFO  | WORKER-4 STOP
+2022-04-01 15:28:32.141 | 10904     | INFO  | WORKER-3 STOP
+2022-04-01 15:28:32.142 | 18704     | INFO  | WORKER-2 STOP
+2022-04-01 15:28:32.142 | 14820     | INFO  | WORKER-1 STOP
+2022-04-01 15:28:32.142 | 3956      | INFO  | STOP
