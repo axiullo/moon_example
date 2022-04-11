@@ -3,13 +3,14 @@ local moon = require("moon")
 
 local mysql = require("moon.db.mysql")
 moon.async(function()
-        local db, err = mysql.connect({
-        host="127.0.0.1",
-        port=3306,
-        database="mysql",
-        user="root",
-        password="123456",
-        timeout= 1000,--连接超时ms
+    local db, err = mysql.connect({
+        host = "127.0.0.1",
+        port = 3306,
+        -- database = "mysql",
+        database = "test",
+        user = "root",
+        password = "123456",
+        timeout = 1000, --连接超时ms
         max_packet_size = 1024 * 1024, --数据包最大字节数
     })
 
@@ -20,12 +21,15 @@ moon.async(function()
 
     local res = db:query("drop table if exists cats")
     res = db:query("create table cats "
-                    .."(id serial primary key, ".. "name varchar(5))")
+    .. "(id serial primary key, " .. "name varchar(5))")
     print_r(res)
 
+    print("!!!!!!  insertinto")
     res = db:query("insert into cats (name) "
-                            .. "values (\'Bob\'),(\'\'),(null)")
+    .. "values (1, \'Bob\'),(1, \'\'),(2,null)")
     print_r(res)
+    print("!!!!!!  insertinto end")
+
     res = db:query("select * from cats order by id asc")
     print_r(res)
 
@@ -33,24 +37,24 @@ moon.async(function()
     res = db:query("select * from cats order by id asc ; select * from cats")
     print_r(res, "multiresultset test result=")
 
-    print ("escape string test result=", mysql.quote_sql_str([[\mysql escape %string test'test"]]) )
+    print ("escape string test result=", mysql.quote_sql_str([[\mysql escape %string test'test"]]))
 
     -- bad sql statement
-    local res =  db:query("select * from notexisttable" )
+    local res = db:query("select * from notexisttable")
     print_r(res, "bad query test result=")
 
-    local i=1
+    local i = 1
     while true do
-        local    res = db:query("select * from cats order by id asc")
-        print ( "test1 loop times=" ,i,"\n","query result=")
-        print_r( res )
+        local res = db:query("select * from cats order by id asc")
+        print ("test1 loop times=", i, "\n", "query result=")
+        print_r(res)
 
         res = db:query("select * from cats order by id asc")
-        print ( "test1 loop times=" ,i,"\n","query result=")
-        print_r( res )
+        print ("test1 loop times=", i, "\n", "query result=")
+        print_r(res)
 
         moon.sleep(1000)
-        i=i+1
+        i = i + 1
     end
 
     -- db:disconnect()

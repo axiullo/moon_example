@@ -2,11 +2,12 @@ local moon = require("moon")
 local memorydata = require("memorydata")
 local socket = require("moon.socket")
 local message = wm_get_commands("message")
+local msend = require("msend")
 
 local login_list = memorydata.getobj("login_list")
 local this = {}
 
-function this.clitologin(from_gate, cli_fd, msg)
+function this.clitologin(req_info, msg)
     if not next(login_list) then
         print_warn("no login_server link")
         return
@@ -15,8 +16,7 @@ function this.clitologin(from_gate, cli_fd, msg)
     local loginkeys = table.keys(login_list)
     local loginfd = loginkeys[math.random(#loginkeys)]
 
-    local param_msg = string.pack(">H", 1) .. string.pack(">I4", from_gate) .. string.pack(">I4", cli_fd) .. msg
-    socket.write(loginfd, param_msg)
+    msend.message_tos(loginfd, req_info, msg)
 end
 
 this.call_func = {
@@ -37,9 +37,9 @@ function this.getservertype(id)
 end
 
 ---客户端给服务器消息
-function message.cli2srv_message(from_gate, cli_fd, servertypeid, msg)
+function message.cli2srv_message(servertypeid, req_info, msg)
     local func = this.call_func[this.getservertype(servertypeid)]
-    func(from_gate, cli_fd, msg)
+    func(req_info, msg)
 end
 
 return this

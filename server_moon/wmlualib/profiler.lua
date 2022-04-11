@@ -6,6 +6,7 @@ local profiler = {}
 
 -- 执行消耗开始
 function profiler:execute_cost_start(info)
+    info = info or "execute cost"
     self.start_ts = os.time()
     self.info = info
     print(string.format("%s cost start %d", info, self.start_ts))

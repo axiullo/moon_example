@@ -76,12 +76,17 @@ local _g = _G
 _g["print"] = moon.info
 _g["print_warn"] = moon.warn
 _g["print_error"] = moon.error
+_g["print_debug"] = moon.debug
 
 moon.exports = {}
 setmetatable(
     moon.exports,
     {
         __newindex = function(_, name, value)
+            -- if _g[name] then
+            --     error(string.format("GLOBAL VARIABLE has %s", name))
+            -- end
+
             rawset(_g, name, value)
         end,
         __index = function(_, name)
@@ -270,7 +275,14 @@ local co_pool = setmetatable({}, {__mode = "kv"})
 
 local function invoke(co, fn, ...)
     co_num = co_num + 1
-    fn(...)
+
+    ---函数报错不会有报错信息, 加个pcall
+    local ok, reason = pcall(fn, ...)
+
+    if not ok then
+        print_error(reason)
+    end
+
     co_num = co_num - 1
     co_pool[#co_pool + 1] = co
 end

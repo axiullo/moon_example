@@ -1,6 +1,6 @@
 local moon = require("moon")
-local message = wm_get_commands("message")
 
+local message = wm_get_commands("message")
 local reg_protocol = moon.register_protocol
 local this = {}
 
@@ -15,10 +15,22 @@ reg_protocol {
         local cli_fd = moon.decode(msg, "H")
         local src_msg = moon.decode(msg, "Z")
 
-        print("=================== CLITOSER dispatch", cli_fd, src_msg)
+        print("=================== CLITOSER dispatch", cli_fd, from_gate, src_msg)
 
         local servertypeid, nextpos = string.unpack(">H", src_msg)
-        message.cli2srv_message(from_gate, cli_fd, servertypeid, string.sub(src_msg, nextpos))
+
+        local req_info = {
+            from_service = from_gate,
+            cli_fd = cli_fd
+        }
+
+        -- message.cli2srv_message(servertypeid, req_info, string.sub(src_msg, nextpos))
+
+        local ok, err = xpcall(message.cli2srv_message, debug.traceback, servertypeid, req_info, string.sub(src_msg, nextpos))
+
+        if not ok then
+            print("error", err)
+        end
     end
 }
 
@@ -42,5 +54,3 @@ reg_protocol {
 }
 
 return this
-
-

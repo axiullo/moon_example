@@ -6,6 +6,7 @@ local json = require("json")
 local path = table.concat({
     "./lualib/?.lua",
     "./wmlualib/?.lua",
+    "./middle/?.lua",
 }, ";")
 
 local oldpackpath = package.path
@@ -117,10 +118,12 @@ socket.on("connect", function(fd, msg)
     clientfd = fd
 
     local param_t = {
-        account = "wm",
-        pwd = "123456",
-        a = 1,
-        b = 2,
+        account_name = "wm",
+        password = "123456",
+        params = {
+            a = 1,
+            b = 2,
+        },
         name = "哈哈"
     }
 
@@ -157,4 +160,26 @@ end)
 
 function commands.login_result(data)
     print(table.tostring(data))
+
+    if data.result == 0 then
+        local param_t = {
+            account_name = "wm",
+            password = "123456",
+            params = {
+                a = 1,
+                b = 2,
+            },
+            name = "哈哈"
+        }
+
+        send2login(clientfd, "regist", param_t)
+    end
+end
+
+function commands.regist_result(data)
+    if data.result == 0 then
+        print(data.content)
+    elseif data.result == 1 then
+        print(data.content)
+    end
 end

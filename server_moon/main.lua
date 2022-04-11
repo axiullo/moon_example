@@ -17,6 +17,7 @@ print("start server")
 local path = table.concat({
     "./lualib/?.lua",
     "./wmlualib/?.lua",
+    "./middle/?.lua",
 }, ";")
 
 local oldpackpath = package.path

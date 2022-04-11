@@ -21,7 +21,7 @@ return {
     login = {
         base_name = "login",
         file = "service_login.lua",
-        num = 2,
+        num = 1,
         unique = true, -- 通过name做唯一区分,name不能相同
     }
 }

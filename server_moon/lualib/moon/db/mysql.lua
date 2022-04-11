@@ -34,48 +34,48 @@ local _M = {_VERSION = "0.14"}
 --   FROM information_schema.collations
 --   WHERE IS_DEFAULT = 'Yes' ORDER BY id;
 local CHARSET_MAP = {
-    _default  = 0,
-    big5      = 1,
-    dec8      = 3,
-    cp850     = 4,
-    hp8       = 6,
-    koi8r     = 7,
-    latin1    = 8,
-    latin2    = 9,
-    swe7      = 10,
-    ascii     = 11,
-    ujis      = 12,
-    sjis      = 13,
-    hebrew    = 16,
-    tis620    = 18,
-    euckr     = 19,
-    koi8u     = 22,
-    gb2312    = 24,
-    greek     = 25,
-    cp1250    = 26,
-    gbk       = 28,
-    latin5    = 30,
-    armscii8  = 32,
-    utf8      = 33,
-    ucs2      = 35,
-    cp866     = 36,
-    keybcs2   = 37,
-    macce     = 38,
-    macroman  = 39,
-    cp852     = 40,
-    latin7    = 41,
-    utf8mb4   = 45,
-    cp1251    = 51,
-    utf16     = 54,
-    utf16le   = 56,
-    cp1256    = 57,
-    cp1257    = 59,
-    utf32     = 60,
-    binary    = 63,
-    geostd8   = 92,
-    cp932     = 95,
-    eucjpms   = 97,
-    gb18030   = 248
+    _default = 0,
+    big5 = 1,
+    dec8 = 3,
+    cp850 = 4,
+    hp8 = 6,
+    koi8r = 7,
+    latin1 = 8,
+    latin2 = 9,
+    swe7 = 10,
+    ascii = 11,
+    ujis = 12,
+    sjis = 13,
+    hebrew = 16,
+    tis620 = 18,
+    euckr = 19,
+    koi8u = 22,
+    gb2312 = 24,
+    greek = 25,
+    cp1250 = 26,
+    gbk = 28,
+    latin5 = 30,
+    armscii8 = 32,
+    utf8 = 33,
+    ucs2 = 35,
+    cp866 = 36,
+    keybcs2 = 37,
+    macce = 38,
+    macroman = 39,
+    cp852 = 40,
+    latin7 = 41,
+    utf8mb4 = 45,
+    cp1251 = 51,
+    utf16 = 54,
+    utf16le = 56,
+    cp1256 = 57,
+    cp1257 = 59,
+    utf32 = 60,
+    binary = 63,
+    geostd8 = 92,
+    cp932 = 95,
+    eucjpms = 97,
+    gb18030 = 248
 }
 
 -- constants
@@ -201,7 +201,7 @@ local function _dumphex(bytes)
     return strgsub(bytes, ".",
         function(x)
             return strformat("%02x ", strbyte(x))
-        end)
+    end)
 end
 
 local function _compute_token(password, scramble)
@@ -745,8 +745,8 @@ function _M.connect(opts)
     local user = opts.user or ""
     local password = opts.password or ""
     local charset = CHARSET_MAP[opts.charset or "_default"]
-    local channel = 
-        socketchannel.channel {
+    local channel =
+    socketchannel.channel {
         host = opts.host,
         port = opts.port or 3306,
         auth = _mysql_login(self, user, password, charset, database, opts.on_connect),
@@ -1069,7 +1069,7 @@ end
 function _M.stmt_reset(self, stmt)
     local querypacket = _compose_stmt_reset(self, stmt)
     local sockchannel = self.sockchannel
-        if not self.query_resp then
+    if not self.query_resp then
         self.query_resp = _query_resp(self)
     end
     return sockchannel:request(querypacket, self.query_resp)
@@ -1123,7 +1123,7 @@ local escape_map = {
 }
 
 function _M.quote_sql_str( str)
-    return strformat("'%s'", strgsub(str, "[\0\b\n\r\t\26\\\'\"]", escape_map))
+    return strformat("'%s'", strgsub(str, "[\0\b\\\n\\\r\t\26\\\'\"]", escape_map))
 end
 
 function _M.set_compact_arrays(self, value)
@@ -1135,3 +1135,7 @@ function _M.pack_query_buffer()
 end
 
 return _M
+
+
+
+       

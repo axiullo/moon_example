@@ -3,10 +3,12 @@ local moon = require("moon")
 local socket = require("moon.socket")
 local json = require("json")
 
+require("global_common")
 require("regist_protocol")
 require("ingate_commands")
 require("ingate_message")
 
+local _wg = moon.exports
 local commands = wm_get_commands("commands")
 local memorydata = require("memorydata")
 
@@ -15,12 +17,14 @@ local PORT = conf.port
 
 local all_conf = require("server_config")
 local fd_list = memorydata.getobj("fd_list")
+local login_list = memorydata.getobj("login_list", setmetatable({}, {__mode = "kv"}))
 
 local this = {}
-local protocol = {}
+local transfer_func = {}
+local transfer_type = _wg.transfer_type
 
 ---本地协议
-protocol[1] = function(fd, src_msg)
+transfer_func[transfer_type.native] = function(fd, src_msg)
     local cmd, nextpos = string.unpack("s1", src_msg)
 
     if not commands[cmd] then
@@ -36,10 +40,10 @@ protocol[1] = function(fd, src_msg)
 end
 
 ---转回客户端
-protocol[2] = function(fd, src_msg)
+transfer_func[transfer_type.client] = function(fd, src_msg)
     local nextpos = 0
-    local service_id, nextpos = string.unpack(">I4", src_msg, nextpos)
-    local cli_id, nextpos = string.unpack(">I4", src_msg, nextpos)
+    local service_id, nextpos = string.unpack(" > I4", src_msg, nextpos)
+    local cli_id, nextpos = string.unpack(" > I4", src_msg, nextpos)
 
     moon.raw_send(moon.PTYPE_SRV2CLI, service_id, tostring(cli_id), string.sub(src_msg, nextpos))
 end
@@ -61,25 +65,34 @@ end)
 
 socket.on("message", function(fd, msg)
     local src_msg = moon.decode(msg, "Z")
-    local index, nextpos = string.unpack(">H", src_msg)
-    local protocol_func = protocol[index]
+    local index, nextpos = string.unpack(" > H", src_msg)
+    local func = transfer_func[index]
 
-    if not protocol_func then
+    if not func then
         socket.close(fd)
-        print("close ", fd, "protocol not exist!", index)
+        print("close ", fd, "transfer_func not exist!", index)
         return
     end
 
-    local ok, err = xpcall(protocol_func, debug.traceback, fd, string.sub(src_msg, nextpos))
+    moon.async(function()
+        local ok, err = xpcall(func, debug.traceback, fd, string.sub(src_msg, nextpos))
 
-    if not ok then
-        print("error", err)
-    end
+        if not ok then
+            print("error", err)
+        end
+    end)
 end)
 
 socket.on("close", function(fd, msg)
     fd_list[fd] = nil
     print("close ", fd, moon.decode(msg, "Z"))
+
+    local login_name = login_list[fd]
+
+    if login_name then
+        login_list[fd] = nil
+        print("login fd closed ", login_name)
+    end
 end)
 
 socket.on("error", function(fd, msg)

@@ -4,7 +4,6 @@ local socket = require("moon.socket")
 local seri = require("seri")
 
 require("regist_protocol")
-
 require("profiler")
 
 local message = wm_get_commands("message")
@@ -20,8 +19,6 @@ local this = {}
 local servertype_list = {
     [101] = "login",
 }
-
-print(package.path)
 
 -------------------2 bytes len (big endian) protocol------------------------
 socket.on("accept", function(fd, msg)

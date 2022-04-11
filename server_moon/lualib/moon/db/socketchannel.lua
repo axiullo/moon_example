@@ -19,8 +19,8 @@ function socketchannel.channel(opts)
 end
 
 function socketchannel:connect()
-    local fd, err = socket.connect(self._opts.host, self._opts.port, moon.PTYPE_TEXT,self._opts.timeout)
-    if not fd or fd ==0 then
+    local fd, err = socket.connect(self._opts.host, self._opts.port, moon.PTYPE_TEXT, self._opts.timeout)
+    if not fd or fd == 0 then
         return {code = "SOCKET", err = err}
     end
     self._fd = fd
@@ -29,7 +29,7 @@ function socketchannel:connect()
     if response then
         moon.async(function ()
             while self._fd do
-                local ok , session, result_ok, result_data = pcall(response, self)
+                local ok, session, result_ok, result_data = pcall(response, self)
                 -- print(ok , session, result_ok, result_data)
                 if ok and session then
                     local co = self._threads[session]
@@ -68,7 +68,7 @@ function socketchannel:response(resp)
     return data
 end
 
-function socketchannel:request(req,resp)
+function socketchannel:request(req, resp)
     socket.write(self._fd, req)
     if self._opts.response then
         if resp == nil then
