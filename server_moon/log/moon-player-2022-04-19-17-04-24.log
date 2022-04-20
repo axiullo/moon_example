@@ -1,0 +1,56 @@
+2022-04-19 17:04:24.421 | 14000     | INFO  | INIT with 6 workers.
+2022-04-19 17:04:24.421 | 14000     | INFO  | WORKER-1 RUN
+2022-04-19 17:04:24.422 | 14000     | INFO  | WORKER-2 RUN
+2022-04-19 17:04:24.422 | 22476     | INFO  | WORKER-1 START
+2022-04-19 17:04:24.423 | 14000     | INFO  | WORKER-3 RUN
+2022-04-19 17:04:24.423 | 11152     | INFO  | WORKER-2 START
+2022-04-19 17:04:24.423 | 14000     | INFO  | WORKER-4 RUN
+2022-04-19 17:04:24.423 | 3040      | INFO  | WORKER-3 START
+2022-04-19 17:04:24.423 | 14000     | INFO  | WORKER-5 RUN
+2022-04-19 17:04:24.423 | 11284     | INFO  | WORKER-4 START
+2022-04-19 17:04:24.424 | 14000     | INFO  | WORKER-6 RUN
+2022-04-19 17:04:24.424 | 22476     | INFO  |  new_service 16777217
+2022-04-19 17:04:24.424 | 2268      | INFO  | WORKER-5 START
+2022-04-19 17:04:24.424 | 3676      | INFO  | WORKER-6 START
+2022-04-19 17:04:24.424 | 14000     | INFO  | server::run() state = 2
+2022-04-19 17:04:24.433 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 17:04:24.433 | 11152     | INFO  |  new_service 33554433
+2022-04-19 17:04:24.433 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 17:04:24.442 | :02000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 17:04:24.442 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:04:24.442 | :02000001 | INFO  | [WORKER 2] new service [player1]
+2022-04-19 17:04:24.442 | 3040      | INFO  |  new_service 50331649
+2022-04-19 17:04:24.443 | :02000001 | INFO  | connect	1	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 17:04:24.449 | :03000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 17:04:24.449 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:04:24.449 | :03000001 | INFO  | [WORKER 3] new service [player2]
+2022-04-19 17:04:24.449 | 11284     | INFO  |  new_service 67108865
+2022-04-19 17:04:24.449 | :03000001 | INFO  | connect	3	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 17:04:24.452 | :04000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 17:04:24.452 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:04:24.452 | :04000001 | INFO  | [WORKER 4] new service [player3]
+2022-04-19 17:04:24.453 | :04000001 | INFO  | connect	5	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 17:04:25.941 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:04:25.943 | :02000001 | INFO  | connect	7	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 17:04:25.945 | :02000001 | INFO  | connect	8	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 17:04:25.947 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:04:25.949 | :03000001 | INFO  | connect	9	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 17:04:25.951 | :03000001 | INFO  | connect	10	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 17:04:25.952 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:04:25.954 | :04000001 | INFO  | connect	11	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 17:04:25.956 | :04000001 | INFO  | connect	12	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 17:04:31.931 | :04000001 | INFO  | close 	11	commands not exist!	s2s_login_after	(service_player.lua:59)
+2022-04-19 17:04:31.931 | :04000001 | INFO  | error 	11	{"addr":"","errcode":10009,"errmsg":"提供的文件句柄无效。"}	(service_player.lua:100)
+2022-04-19 17:04:31.931 | :04000001 | INFO  | close 	11	nil	(service_player.lua:90)
+2022-04-19 17:06:04.917 | 14000     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 17:06:04.917 | :02000001 | INFO  | [WORKER 2] destroy service [player1] 
+2022-04-19 17:06:04.917 | :04000001 | INFO  | [WORKER 4] destroy service [player3] 
+2022-04-19 17:06:04.917 | :03000001 | INFO  | [WORKER 3] destroy service [player2] 
+2022-04-19 17:06:04.917 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 17:06:04.919 | 3676      | INFO  | WORKER-6 STOP
+2022-04-19 17:06:04.919 | 2268      | INFO  | WORKER-5 STOP
+2022-04-19 17:06:04.919 | 11284     | INFO  | WORKER-4 STOP
+2022-04-19 17:06:04.919 | 3040      | INFO  | WORKER-3 STOP
+2022-04-19 17:06:04.920 | 11152     | INFO  | WORKER-2 STOP
+2022-04-19 17:06:04.920 | 22476     | INFO  | WORKER-1 STOP
+2022-04-19 17:06:04.920 | 14000     | INFO  | STOP

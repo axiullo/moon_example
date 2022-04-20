@@ -1,0 +1,59 @@
+2022-04-19 14:58:51.127 | 3132      | INFO  | INIT with 6 workers.
+2022-04-19 14:58:51.127 | 3132      | INFO  | WORKER-1 RUN
+2022-04-19 14:58:51.128 | 3132      | INFO  | WORKER-2 RUN
+2022-04-19 14:58:51.128 | 10800     | INFO  | WORKER-1 START
+2022-04-19 14:58:51.128 | 3132      | INFO  | WORKER-3 RUN
+2022-04-19 14:58:51.129 | 18320     | INFO  | WORKER-2 START
+2022-04-19 14:58:51.129 | 3132      | INFO  | WORKER-4 RUN
+2022-04-19 14:58:51.129 | 17036     | INFO  | WORKER-3 START
+2022-04-19 14:58:51.129 | 3132      | INFO  | WORKER-5 RUN
+2022-04-19 14:58:51.129 | 9276      | INFO  | WORKER-4 START
+2022-04-19 14:58:51.129 | 3132      | INFO  | WORKER-6 RUN
+2022-04-19 14:58:51.129 | 3972      | INFO  | WORKER-5 START
+2022-04-19 14:58:51.130 | 10800     | INFO  |  new_service 16777217
+2022-04-19 14:58:51.130 | 22472     | INFO  | WORKER-6 START
+2022-04-19 14:58:51.130 | 3132      | INFO  | server::run() state = 2
+2022-04-19 14:58:51.138 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 14:58:51.139 | 18320     | INFO  |  new_service 33554433
+2022-04-19 14:58:51.139 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 14:58:51.148 | :02000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 14:58:51.148 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:58:51.148 | :02000001 | INFO  | [WORKER 2] new service [player1]
+2022-04-19 14:58:51.148 | 17036     | INFO  |  new_service 50331649
+2022-04-19 14:58:51.148 | :02000001 | INFO  | connect	1	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 14:58:51.153 | :03000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 14:58:51.153 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:58:51.153 | :03000001 | INFO  | [WORKER 3] new service [player2]
+2022-04-19 14:58:51.153 | 9276      | INFO  |  new_service 67108865
+2022-04-19 14:58:51.153 | :03000001 | INFO  | connect	3	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 14:58:51.157 | :04000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 14:58:51.157 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:58:51.157 | :04000001 | INFO  | [WORKER 4] new service [player3]
+2022-04-19 14:58:51.157 | :04000001 | INFO  | connect	5	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 14:58:52.648 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:58:52.649 | :02000001 | INFO  | connect	7	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 14:58:52.652 | :02000001 | INFO  | close 	7	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 14:58:52.652 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:58:52.652 | :02000001 | INFO  | connect	8	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 14:58:52.654 | :02000001 | INFO  | close 	8	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 14:58:52.654 | :03000001 | INFO  | connect	9	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 14:58:52.656 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:58:52.656 | :03000001 | INFO  | close 	9	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 14:58:52.657 | :03000001 | INFO  | connect	10	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 14:58:52.658 | :04000001 | INFO  | connect	11	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 14:58:52.658 | :03000001 | INFO  | close 	10	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 14:58:52.660 | :04000001 | INFO  | close 	11	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 14:58:52.660 | :04000001 | INFO  | connect	12	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 14:58:52.662 | :04000001 | INFO  | close 	12	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 15:06:35.992 | 3132      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 15:06:35.992 | :03000001 | INFO  | [WORKER 3] destroy service [player2] 
+2022-04-19 15:06:35.992 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 15:06:35.992 | :04000001 | INFO  | [WORKER 4] destroy service [player3] 
+2022-04-19 15:06:35.992 | :02000001 | INFO  | [WORKER 2] destroy service [player1] 
+2022-04-19 15:06:35.994 | 22472     | INFO  | WORKER-6 STOP
+2022-04-19 15:06:35.994 | 3972      | INFO  | WORKER-5 STOP
+2022-04-19 15:06:35.994 | 9276      | INFO  | WORKER-4 STOP
+2022-04-19 15:06:35.994 | 17036     | INFO  | WORKER-3 STOP
+2022-04-19 15:06:35.994 | 18320     | INFO  | WORKER-2 STOP
+2022-04-19 15:06:35.995 | 10800     | INFO  | WORKER-1 STOP
+2022-04-19 15:06:35.995 | 3132      | INFO  | STOP

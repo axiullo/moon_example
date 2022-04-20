@@ -1,0 +1,38 @@
+2022-04-19 16:44:39.544 | 8480      | INFO  | INIT with 6 workers.
+2022-04-19 16:44:39.544 | 8480      | INFO  | WORKER-1 RUN
+2022-04-19 16:44:39.545 | 8480      | INFO  | WORKER-2 RUN
+2022-04-19 16:44:39.545 | 13128     | INFO  | WORKER-1 START
+2022-04-19 16:44:39.545 | 8480      | INFO  | WORKER-3 RUN
+2022-04-19 16:44:39.545 | 6604      | INFO  | WORKER-2 START
+2022-04-19 16:44:39.545 | 8480      | INFO  | WORKER-4 RUN
+2022-04-19 16:44:39.545 | 16784     | INFO  | WORKER-3 START
+2022-04-19 16:44:39.545 | 8480      | INFO  | WORKER-5 RUN
+2022-04-19 16:44:39.546 | 23012     | INFO  | WORKER-4 START
+2022-04-19 16:44:39.546 | 8480      | INFO  | WORKER-6 RUN
+2022-04-19 16:44:39.546 | 16904     | INFO  | WORKER-5 START
+2022-04-19 16:44:39.546 | 13128     | INFO  |  new_service 16777217
+2022-04-19 16:44:39.546 | 11812     | INFO  | WORKER-6 START
+2022-04-19 16:44:39.546 | 8480      | INFO  | server::run() state = 2
+2022-04-19 16:44:39.555 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 16:44:39.556 | 6604      | INFO  |  new_service 33554433
+2022-04-19 16:44:39.556 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 16:44:39.565 | :02000001 | INFO  | login server start	login1	127.0.0.1	20701	(service_login.lua:189)
+2022-04-19 16:44:39.565 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 16:44:39.565 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-19 16:44:41.065 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 16:44:41.066 | :02000001 | INFO  | connect	3	127.0.0.1:20620	(service_login.lua:19)
+2022-04-19 16:44:41.066 | :02000001 | INFO  | connect	4	127.0.0.1:20621	(service_login.lua:19)
+2022-04-19 16:44:41.583 | :02000001 | INFO  | error 	3	{"addr":"127.0.0.1:20620","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_login.lua:99)
+2022-04-19 16:44:41.583 | :02000001 | INFO  | close 	3	127.0.0.1:20620	(service_login.lua:93)
+2022-04-19 16:44:41.583 | :02000001 | INFO  | error 	4	{"addr":"127.0.0.1:20621","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_login.lua:99)
+2022-04-19 16:44:41.583 | :02000001 | INFO  | close 	4	127.0.0.1:20621	(service_login.lua:93)
+2022-04-19 16:45:25.603 | 8480      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 16:45:25.603 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 16:45:25.603 | :02000001 | INFO  | [WORKER 2] destroy service [login1] 
+2022-04-19 16:45:25.605 | 11812     | INFO  | WORKER-6 STOP
+2022-04-19 16:45:25.605 | 16904     | INFO  | WORKER-5 STOP
+2022-04-19 16:45:25.605 | 23012     | INFO  | WORKER-4 STOP
+2022-04-19 16:45:25.605 | 16784     | INFO  | WORKER-3 STOP
+2022-04-19 16:45:25.605 | 6604      | INFO  | WORKER-2 STOP
+2022-04-19 16:45:25.605 | 13128     | INFO  | WORKER-1 STOP
+2022-04-19 16:45:25.605 | 8480      | INFO  | STOP

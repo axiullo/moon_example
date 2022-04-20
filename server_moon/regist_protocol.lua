@@ -53,4 +53,23 @@ reg_protocol {
     end
 }
 
+reg_protocol {
+    name = "SRV2SRV",
+    PTYPE = moon.PTYPE_SRV2SRV,
+    pack = function(...)
+        return ...
+    end,
+    dispatch = function(msg)
+        print("=================== PTYPE_SRV2SRV dispatch")
+
+        local from_gate = moon.decode(msg, "S")
+        local header = moon.decode(msg, "H")
+        local src_msg = moon.decode(msg, "Z")
+        print(header)
+        print(src_msg)
+
+        message.srv2srv_message(header, src_msg)
+    end
+}
+
 return this

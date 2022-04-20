@@ -2,13 +2,17 @@ local conf = ... or {}
 local moon = require("moon")
 local socket = require("moon.socket")
 local json = require("json")
-local memorydata = require("memorydata")
+local memorydata = require("middle.memorydata")
+local msend = require("middle.msend")
 
 local commands = wm_get_commands("commands")
 local fdlist = memorydata.getobj("fdlist")
 
-require("global_common")
-require("login_commands")
+require("priority_load")
+require("commands.login.login_commands")
+
+local HOST = conf.host
+local PORT = conf.port
 
 ---------------------------------- socket监听事件 ----------------------------
 socket.on("connect", function(fd, msg)
@@ -25,10 +29,11 @@ transfer_func[transfer_type.native] = function (from_srv_fd, src_msg)
     local from_gate_service, nextpos = string.unpack(">I4", src_msg, nextpos)
     local cli_fd, nextpos = string.unpack(">I4", src_msg, nextpos)
     local cmd, nextpos = string.unpack("s1", src_msg, nextpos)
+    local func = commands[cmd]
 
-    print("receive msg = ", cmd, from_srv_fd)
+    print("receive msg cmd = ", cmd, from_srv_fd, cli_fd)
 
-    if not commands[cmd] then
+    if not func then
         socket.close(from_srv_fd)
         print("close ", from_srv_fd, "commands not exist!", cmd)
         return
@@ -44,7 +49,24 @@ transfer_func[transfer_type.native] = function (from_srv_fd, src_msg)
         cli_fd = cli_fd, --来源的客户端句柄
     }
 
-    commands[cmd](req_info, json_data)
+    func(req_info, json_data)
+end
+
+---
+transfer_func[transfer_type.s2s] = function(fd, src_msg)
+    local cmd, nextpos = string.unpack("s1", src_msg)
+    local func = commands[cmd]
+
+    if not func then
+        socket.close(fd)
+        print("close ", fd, "commands not exist!", cmd)
+        return
+    end
+
+    local str_data = string.unpack("s1", src_msg, nextpos)
+    local json_data = json.decode(str_data)
+
+    func(fd, json_data)
 end
 
 socket.on("message", function(fd, msg)
@@ -69,6 +91,8 @@ end)
 
 socket.on("close", function(fd, msg)
     print("close ", fd, moon.decode(msg, "Z"))
+
+    table.hash_remove(fdlist, fd)
 end)
 
 socket.on("error", function(fd, msg)
@@ -100,7 +124,6 @@ moon.async(function()
     end
 end)
 
-
 local function do_connect(host, port, index)
     local fd, err = socket.connect(host, port, moon.PTYPE_SOCKET)
 
@@ -109,11 +132,11 @@ local function do_connect(host, port, index)
         socket.set_enable_chunked(fd, "wr")
 
         local param_data = {
+            base_name = conf.base_name,
             name = conf.name
         }
 
-        local tomsg = string.pack(">H", 1) .. string.pack("s1", "regist_login") .. string.pack("s1", json.encode(param_data))
-        socket.write(fd, tomsg)
+        msend.sendbyttype(fd, transfer_type.s2s, "regist_server", param_data)
     else
         print("*** todo reconnect ingate", index, host, port)
     end
@@ -134,7 +157,6 @@ local function startup()
         local host = ingate_conf.host
         local baseport = ingate_conf.base_port
         local num = ingate_conf.num
-        local fdlist = {}
 
         for i = 1, num do
             local port = baseport + i - 1
@@ -161,6 +183,10 @@ local function startup_check()
         moon.timeout(1500, startup_check)
     end
 end
+
+local listenfd = socket.listen(HOST, PORT, moon.PTYPE_SOCKET)
+socket.start(listenfd)--start accept
+print("login server start", conf.name, HOST, PORT)
 
 startup_check()
 

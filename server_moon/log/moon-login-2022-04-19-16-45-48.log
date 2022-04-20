@@ -1,0 +1,36 @@
+2022-04-19 16:45:48.452 | 4236      | INFO  | INIT with 6 workers.
+2022-04-19 16:45:48.452 | 4236      | INFO  | WORKER-1 RUN
+2022-04-19 16:45:48.453 | 4236      | INFO  | WORKER-2 RUN
+2022-04-19 16:45:48.453 | 5772      | INFO  | WORKER-1 START
+2022-04-19 16:45:48.454 | 4236      | INFO  | WORKER-3 RUN
+2022-04-19 16:45:48.454 | 16612     | INFO  | WORKER-2 START
+2022-04-19 16:45:48.454 | 4236      | INFO  | WORKER-4 RUN
+2022-04-19 16:45:48.454 | 2636      | INFO  | WORKER-3 START
+2022-04-19 16:45:48.454 | 4236      | INFO  | WORKER-5 RUN
+2022-04-19 16:45:48.454 | 9976      | INFO  | WORKER-4 START
+2022-04-19 16:45:48.454 | 4236      | INFO  | WORKER-6 RUN
+2022-04-19 16:45:48.455 | 5772      | INFO  |  new_service 16777217
+2022-04-19 16:45:48.455 | 14728     | INFO  | WORKER-5 START
+2022-04-19 16:45:48.455 | 8764      | INFO  | WORKER-6 START
+2022-04-19 16:45:48.455 | 4236      | INFO  | server::run() state = 2
+2022-04-19 16:45:48.463 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 16:45:48.463 | 16612     | INFO  |  new_service 33554433
+2022-04-19 16:45:48.463 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 16:45:48.472 | :02000001 | INFO  | login server start	login1	127.0.0.1	20701	(service_login.lua:189)
+2022-04-19 16:45:48.472 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 16:45:48.472 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-19 16:45:49.972 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 16:45:49.973 | :02000001 | INFO  | connect	3	127.0.0.1:20620	(service_login.lua:19)
+2022-04-19 16:45:49.974 | :02000001 | INFO  | connect	4	127.0.0.1:20621	(service_login.lua:19)
+2022-04-19 16:57:02.513 | :02000001 | INFO  | close 	4	127.0.0.1:20621	(service_login.lua:93)
+2022-04-19 16:57:02.513 | :02000001 | INFO  | close 	3	127.0.0.1:20620	(service_login.lua:93)
+2022-04-19 16:57:06.984 | 4236      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 16:57:06.984 | :02000001 | INFO  | [WORKER 2] destroy service [login1] 
+2022-04-19 16:57:06.984 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 16:57:06.986 | 8764      | INFO  | WORKER-6 STOP
+2022-04-19 16:57:06.986 | 14728     | INFO  | WORKER-5 STOP
+2022-04-19 16:57:06.986 | 9976      | INFO  | WORKER-4 STOP
+2022-04-19 16:57:06.986 | 2636      | INFO  | WORKER-3 STOP
+2022-04-19 16:57:06.987 | 16612     | INFO  | WORKER-2 STOP
+2022-04-19 16:57:06.987 | 5772      | INFO  | WORKER-1 STOP
+2022-04-19 16:57:06.987 | 4236      | INFO  | STOP

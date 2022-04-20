@@ -17,7 +17,7 @@ print("start server")
 local path = table.concat({
     "./lualib/?.lua",
     "./wmlualib/?.lua",
-    "./middle/?.lua",
+    -- "./middle/?.lua",
 }, ";")
 
 local oldpackpath = package.path
@@ -51,6 +51,16 @@ local function login_startup()
     local conf = all_conf.login
 
     for i = 1, conf.num do
+        conf.port = conf.base_port + i - 1
+        conf.name = conf.base_name .. i
+        local r = moon.new_service("lua", conf)
+    end
+end
+
+local function player_startup()
+    local conf = all_conf.player
+
+    for i = 1, conf.num do
         conf.name = conf.base_name .. i
         local r = moon.new_service("lua", conf)
     end
@@ -59,6 +69,7 @@ end
 local startup_func = {
     gate = gate_startup,
     login = login_startup,
+    player = player_startup,
 }
 
 local arg = load(moon.get_env("ARG"))()

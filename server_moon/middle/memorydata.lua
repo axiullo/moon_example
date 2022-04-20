@@ -1,3 +1,5 @@
+---内存数据
+
 local this = {
     memorydata = {}
 }

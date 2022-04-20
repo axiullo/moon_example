@@ -1,0 +1,66 @@
+2022-04-19 16:02:24.268 | 11504     | INFO  | INIT with 6 workers.
+2022-04-19 16:02:24.268 | 11504     | INFO  | WORKER-1 RUN
+2022-04-19 16:02:24.270 | 11504     | INFO  | WORKER-2 RUN
+2022-04-19 16:02:24.270 | 9996      | INFO  | WORKER-1 START
+2022-04-19 16:02:24.270 | 11504     | INFO  | WORKER-3 RUN
+2022-04-19 16:02:24.270 | 17548     | INFO  | WORKER-2 START
+2022-04-19 16:02:24.270 | 11504     | INFO  | WORKER-4 RUN
+2022-04-19 16:02:24.271 | 5556      | INFO  | WORKER-3 START
+2022-04-19 16:02:24.271 | 11504     | INFO  | WORKER-5 RUN
+2022-04-19 16:02:24.271 | 15616     | INFO  | WORKER-4 START
+2022-04-19 16:02:24.271 | 11504     | INFO  | WORKER-6 RUN
+2022-04-19 16:02:24.272 | 5748      | INFO  | WORKER-5 START
+2022-04-19 16:02:24.272 | 9996      | INFO  |  new_service 16777217
+2022-04-19 16:02:24.274 | 17392     | INFO  | WORKER-6 START
+2022-04-19 16:02:24.274 | 11504     | INFO  | server::run() state = 2
+2022-04-19 16:02:24.283 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 16:02:24.284 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 16:02:24.284 | 9996      | INFO  |  new_service 16777218
+2022-04-19 16:02:24.290 | :01000002 | INFO  | gate server start	gate1	10.6.60.234	20520	(service_gate.lua:136)
+2022-04-19 16:02:24.290 | :01000002 | INFO  | [WORKER 1] new service [gate1]
+2022-04-19 16:02:24.291 | 17548     | INFO  |  new_service 33554433
+2022-04-19 16:02:24.294 | :02000001 | INFO  | gate server start	gate2	10.6.60.234	20521	(service_gate.lua:136)
+2022-04-19 16:02:24.294 | :02000001 | INFO  | [WORKER 2] new service [gate2]
+2022-04-19 16:02:24.294 | 5556      | INFO  |  new_service 50331649
+2022-04-19 16:02:24.296 | :03000001 | INFO  | gate server start	gate3	10.6.60.234	20522	(service_gate.lua:136)
+2022-04-19 16:02:24.296 | :03000001 | INFO  | [WORKER 3] new service [gate3]
+2022-04-19 16:02:24.296 | 15616     | INFO  |  new_service 67108865
+2022-04-19 16:02:24.300 | :04000001 | INFO  | ingate server start	ingate1	127.0.0.1	20620	(service_ingate.lua:120)
+2022-04-19 16:02:24.300 | :04000001 | INFO  | [WORKER 4] new service [ingate1]
+2022-04-19 16:02:24.300 | 5748      | INFO  |  new_service 83886081
+2022-04-19 16:02:24.302 | :05000001 | INFO  | ingate server start	ingate2	127.0.0.1	20621	(service_ingate.lua:120)
+2022-04-19 16:02:24.302 | :05000001 | INFO  | [WORKER 5] new service [ingate2]
+2022-04-19 16:02:27.183 | :04000001 | INFO  | accept 	6	nil	127.0.0.1:2113	2	(service_ingate.lua:61)
+2022-04-19 16:02:27.183 | :05000001 | INFO  | accept 	7	nil	127.0.0.1:2114	2	(service_ingate.lua:61)
+2022-04-19 16:02:27.183 | :04000001 | INFO  | error	G:\ddd\moon_example\server_moon\ingate_commands.lua:15: attempt to index a nil value (global 'msend')
+stack traceback:
+	G:\ddd\moon_example\server_moon\ingate_commands.lua:15: in function <G:\ddd\moon_example\server_moon\ingate_commands.lua:14>,	 params: fd = 6; msg_data = table: 00000214B130AF60;
+	[C]: in function 'xpcall',	 params:
+	service_ingate.lua:41: in function <service_ingate.lua:27>,	 params: fd = 6; src_msg = regist_server%{"name":"login1","base_name":"login"};
+	[C]: in function 'xpcall',	 params:
+	service_ingate.lua:92: in local 'f',	 params: fd = 6; msg = userdata: 0000004EC17FF7F0;
+	./lualib/moon\socket.lua:126: in local 'dispatch',	 params: msg = userdata: 0000004EC17FF7F0; fd = 6;
+	./lualib/moon.lua:431: in function <./lualib/moon.lua:392>,	 params: msg = userdata: 0000004EC17FF7F0; PTYPE = 4;	(service_ingate.lua:44)
+2022-04-19 16:02:27.183 | :05000001 | INFO  | error	G:\ddd\moon_example\server_moon\ingate_commands.lua:15: attempt to index a nil value (global 'msend')
+stack traceback:
+	G:\ddd\moon_example\server_moon\ingate_commands.lua:15: in function <G:\ddd\moon_example\server_moon\ingate_commands.lua:14>,	 params: fd = 7; msg_data = table: 00000214B130BC60;
+	[C]: in function 'xpcall',	 params:
+	service_ingate.lua:41: in function <service_ingate.lua:27>,	 params: fd = 7; src_msg = regist_server%{"name":"login1","base_name":"login"};
+	[C]: in function 'xpcall',	 params:
+	service_ingate.lua:92: in local 'f',	 params: fd = 7; msg = userdata: 0000004EC27FF240;
+	./lualib/moon\socket.lua:126: in local 'dispatch',	 params: msg = userdata: 0000004EC27FF240; fd = 7;
+	./lualib/moon.lua:431: in function <./lualib/moon.lua:392>,	 params: msg = userdata: 0000004EC27FF240; PTYPE = 4;	(service_ingate.lua:44)
+2022-04-19 16:03:26.613 | 11504     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 16:03:26.613 | :03000001 | INFO  | [WORKER 3] destroy service [gate3] 
+2022-04-19 16:03:26.613 | :04000001 | INFO  | [WORKER 4] destroy service [ingate1] 
+2022-04-19 16:03:26.613 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 16:03:26.613 | :02000001 | INFO  | [WORKER 2] destroy service [gate2] 
+2022-04-19 16:03:26.613 | :05000001 | INFO  | [WORKER 5] destroy service [ingate2] 
+2022-04-19 16:03:26.613 | :01000002 | INFO  | [WORKER 1] destroy service [gate1] 
+2022-04-19 16:03:26.615 | 17392     | INFO  | WORKER-6 STOP
+2022-04-19 16:03:26.615 | 5748      | INFO  | WORKER-5 STOP
+2022-04-19 16:03:26.615 | 15616     | INFO  | WORKER-4 STOP
+2022-04-19 16:03:26.615 | 5556      | INFO  | WORKER-3 STOP
+2022-04-19 16:03:26.615 | 17548     | INFO  | WORKER-2 STOP
+2022-04-19 16:03:26.616 | 9996      | INFO  | WORKER-1 STOP
+2022-04-19 16:03:26.616 | 11504     | INFO  | STOP

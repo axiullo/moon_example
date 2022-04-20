@@ -639,3 +639,47 @@ function table.shuffle(t)
     end
     return tab
 end
+
+---将表b赋值给a, 浅拷贝
+function table.easy_copy(src, des)
+    for k, v in pairs(src) do
+        des[k] = v
+    end
+end
+
+---从哈希结构中删除对应值
+function table.hash_remove(t, value)
+    for k, v in pairs(t) do
+        if v == value then
+            t[k] = nil
+            return k
+        end
+    end
+end
+
+---获得key值,没有就创建默认值
+function table.get_or_create(t, k, defult_value)
+    local ret = t[k]
+
+    if not ret then
+        t[k] = defult_value or {}
+        ret = t[k]
+    end
+
+    return ret
+end
+
+---创建一个只读的变量
+---@param template 模版，比如 template = {x = 0, y = 0, z = 0, w = 0}，模版本身是可以被改的
+function table.readonly(template)
+    if not template.__index then
+        template.__index = template
+        template.__traceback = debug.traceback()
+        template.__newindex = function(t, name, value)
+            error("@只读变量，不可以：" .. t.__traceback)
+        end
+    end
+    return setmetatable({}, template)
+end
+
+table.EMPTY = table.readonly({})

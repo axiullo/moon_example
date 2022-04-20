@@ -1,0 +1,41 @@
+2022-04-19 16:00:15.451 | 15152     | INFO  | INIT with 6 workers.
+2022-04-19 16:00:15.451 | 15152     | INFO  | WORKER-1 RUN
+2022-04-19 16:00:15.452 | 15152     | INFO  | WORKER-2 RUN
+2022-04-19 16:00:15.452 | 23248     | INFO  | WORKER-1 START
+2022-04-19 16:00:15.452 | 15152     | INFO  | WORKER-3 RUN
+2022-04-19 16:00:15.452 | 19644     | INFO  | WORKER-2 START
+2022-04-19 16:00:15.452 | 15152     | INFO  | WORKER-4 RUN
+2022-04-19 16:00:15.453 | 1736      | INFO  | WORKER-3 START
+2022-04-19 16:00:15.453 | 15152     | INFO  | WORKER-5 RUN
+2022-04-19 16:00:15.453 | 23328     | INFO  | WORKER-4 START
+2022-04-19 16:00:15.453 | 15152     | INFO  | WORKER-6 RUN
+2022-04-19 16:00:15.453 | 16564     | INFO  | WORKER-5 START
+2022-04-19 16:00:15.453 | 23248     | INFO  |  new_service 16777217
+2022-04-19 16:00:15.453 | 12072     | INFO  | WORKER-6 START
+2022-04-19 16:00:15.454 | 15152     | INFO  | server::run() state = 2
+2022-04-19 16:00:15.463 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 16:00:15.464 | 19644     | INFO  |  new_service 33554433
+2022-04-19 16:00:15.464 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 16:00:15.472 | :02000001 | INFO  | login server start	login1	127.0.0.1	20701	(service_login.lua:189)
+2022-04-19 16:00:15.472 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 16:00:15.472 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-19 16:00:16.616 | :02000001 | INFO  | sys	regist_server	3	player	player1	(G:\ddd\moon_example\server_moon\commands\login\login_commands.lua:95)
+2022-04-19 16:00:16.621 | :02000001 | INFO  | sys	regist_server	4	player	player2	(G:\ddd\moon_example\server_moon\commands\login\login_commands.lua:95)
+2022-04-19 16:00:16.624 | :02000001 | INFO  | sys	regist_server	5	player	player3	(G:\ddd\moon_example\server_moon\commands\login\login_commands.lua:95)
+2022-04-19 16:00:16.972 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 16:00:16.973 | :02000001 | INFO  | connect	6	127.0.0.1:20620	(service_login.lua:19)
+2022-04-19 16:00:16.975 | :02000001 | INFO  | connect	7	127.0.0.1:20621	(service_login.lua:19)
+2022-04-19 16:00:17.502 | :02000001 | INFO  | error 	6	{"addr":"127.0.0.1:20620","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_login.lua:99)
+2022-04-19 16:00:17.502 | :02000001 | INFO  | close 	6	127.0.0.1:20620	(service_login.lua:93)
+2022-04-19 16:00:17.502 | :02000001 | INFO  | error 	7	{"addr":"127.0.0.1:20621","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_login.lua:99)
+2022-04-19 16:00:17.502 | :02000001 | INFO  | close 	7	127.0.0.1:20621	(service_login.lua:93)
+2022-04-19 16:00:41.877 | 15152     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 16:00:41.877 | :02000001 | INFO  | [WORKER 2] destroy service [login1] 
+2022-04-19 16:00:41.877 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 16:00:41.879 | 12072     | INFO  | WORKER-6 STOP
+2022-04-19 16:00:41.879 | 16564     | INFO  | WORKER-5 STOP
+2022-04-19 16:00:41.879 | 23328     | INFO  | WORKER-4 STOP
+2022-04-19 16:00:41.879 | 1736      | INFO  | WORKER-3 STOP
+2022-04-19 16:00:41.879 | 19644     | INFO  | WORKER-2 STOP
+2022-04-19 16:00:41.879 | 23248     | INFO  | WORKER-1 STOP
+2022-04-19 16:00:41.879 | 15152     | INFO  | STOP

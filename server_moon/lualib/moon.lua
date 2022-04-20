@@ -6,7 +6,7 @@ require("base.math")
 require("base.util")
 require("base.class")
 
---全局函数
+--全局函数, 在改变全局变量前加载.
 require("common")
 
 ---@type core
@@ -51,6 +51,8 @@ moon.PTYPE_SOCKET_UDP = 10
 ---add protocol
 moon.PTYPE_CLI2SRV = 101 --客户端给服务器消息
 moon.PTYPE_SRV2CLI = 102
+moon.PTYPE_SRV2SRV = 103
+
 
 --moon.codecache = require("codecache")
 
@@ -61,6 +63,7 @@ moon.PTYPE_SRV2CLI = 102
 moon.DEBUG = function ()
     return core.get_loglevel() == 4 -- LOG_DEBUG
 end
+
 moon.error = function(...) core.log(1, ...) end
 moon.warn = function(...) core.log(2, ...) end
 moon.info = function(...) core.log(3, ...) end

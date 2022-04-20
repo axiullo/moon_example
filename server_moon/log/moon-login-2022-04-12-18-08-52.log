@@ -1,0 +1,46 @@
+2022-04-12 18:08:52.426 | 6912      | INFO  | INIT with 6 workers.
+2022-04-12 18:08:52.426 | 6912      | INFO  | WORKER-1 RUN
+2022-04-12 18:08:52.427 | 6912      | INFO  | WORKER-2 RUN
+2022-04-12 18:08:52.427 | 14332     | INFO  | WORKER-1 START
+2022-04-12 18:08:52.427 | 6912      | INFO  | WORKER-3 RUN
+2022-04-12 18:08:52.427 | 14868     | INFO  | WORKER-2 START
+2022-04-12 18:08:52.427 | 6912      | INFO  | WORKER-4 RUN
+2022-04-12 18:08:52.427 | 23656     | INFO  | WORKER-3 START
+2022-04-12 18:08:52.427 | 6912      | INFO  | WORKER-5 RUN
+2022-04-12 18:08:52.427 | 27608     | INFO  | WORKER-4 START
+2022-04-12 18:08:52.428 | 6912      | INFO  | WORKER-6 RUN
+2022-04-12 18:08:52.428 | 25860     | INFO  | WORKER-5 START
+2022-04-12 18:08:52.428 | 14332     | INFO  |  new_service 16777217
+2022-04-12 18:08:52.428 | 23740     | INFO  | WORKER-6 START
+2022-04-12 18:08:52.428 | 6912      | INFO  | server::run() state = 2
+2022-04-12 18:08:52.435 | 14332     | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+ (lua_service.cpp:107)
+2022-04-12 18:08:52.440 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-12 18:08:52.440 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-12 18:08:52.440 | 14868     | INFO  |  new_service 33554433
+2022-04-12 18:08:52.442 | 14868     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;'..package.path
+return {num=1,file='service_login.lua',unique=true,name='login1',base_name='login',} (lua_service.cpp:107)
+2022-04-12 18:08:52.455 | 14868     | INFO  | #### start cost ts 490690790
+2022-04-12 18:08:52.455 | 14868     | INFO  | #### cost ts  490690790  0
+2022-04-12 18:08:52.455 | :02000001 | INFO  | startup_check	(service_login.lua:149)
+2022-04-12 18:08:52.455 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-12 18:08:53.955 | :02000001 | INFO  | startup_check	(service_login.lua:149)
+2022-04-12 18:08:53.955 | 14868     | INFO  | #### start cost ts 490692291
+2022-04-12 18:08:53.955 | 14868     | INFO  | #### cost ts  490692291  0
+2022-04-12 18:08:53.956 | :02000001 | INFO  | connect	2	127.0.0.1:20620	(service_login.lua:15)
+2022-04-12 18:08:53.956 | 14868     | INFO  | #### start cost ts 490692291
+2022-04-12 18:08:53.956 | 14868     | INFO  | #### cost ts  490692291  0
+2022-04-12 18:08:53.957 | :02000001 | INFO  | connect	3	127.0.0.1:20621	(service_login.lua:15)
+2022-04-12 18:09:11.125 | :02000001 | INFO  | receive msg = 	login	3	(service_login.lua:30)
+2022-04-12 18:09:25.562 | :02000001 | INFO  | close 	3	127.0.0.1:20621	(service_login.lua:72)
+2022-04-12 18:09:25.562 | :02000001 | INFO  | close 	2	127.0.0.1:20620	(service_login.lua:72)
+2022-04-12 18:18:15.962 | 6912      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-12 18:18:15.962 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-12 18:18:15.962 | :02000001 | INFO  | [WORKER 2] destroy service [login1] 
+2022-04-12 18:18:15.964 | 23740     | INFO  | WORKER-6 STOP
+2022-04-12 18:18:15.964 | 25860     | INFO  | WORKER-5 STOP
+2022-04-12 18:18:15.964 | 27608     | INFO  | WORKER-4 STOP
+2022-04-12 18:18:15.964 | 23656     | INFO  | WORKER-3 STOP
+2022-04-12 18:18:15.964 | 14868     | INFO  | WORKER-2 STOP
+2022-04-12 18:18:15.964 | 14332     | INFO  | WORKER-1 STOP
+2022-04-12 18:18:15.964 | 6912      | INFO  | STOP

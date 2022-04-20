@@ -6,7 +6,6 @@ local json = require("json")
 local path = table.concat({
     "./lualib/?.lua",
     "./wmlualib/?.lua",
-    "./middle/?.lua",
 }, ";")
 
 local oldpackpath = package.path
@@ -14,14 +13,18 @@ package.path = path .. ";"
 moon.set_env("PATH", string.format("package.path='%s'..package.path\n", package.path))
 package.path = oldpackpath .. ";" .. package.path
 
+require("priority_load")
+
 local clientfd
 local HOST = "10.6.60.234"
-local PORT = 20520
+local PORT = 20521
 local msgid = 0
 
 local commands = wm_get_commands("commands")
+local _wg = moon.exports
 
-moon.exports.is_serverstop = false
+_wg.is_serverstop = false
+local this = {}
 
 local function is_serverstop()
     return _G.is_serverstop
@@ -45,18 +48,22 @@ local function send(fd, data)
 end
 
 --服务器类型
-local servertype_list = {
-    login = 101,
-}
+local servertype_list = _wg.servertype_list_type2id
 
 local function send2login(fd, cmd, src_data)
+    src_data = src_data or ""
     src_data = json.encode(src_data)
     local tmpmsgid = get_msgid()
-
-    -- local msg = string.pack(">I4", tmpmsgid) .. string.pack(">H", servertype_list.login)
-    -- msg = msg ..string.pack("s1", src_data)
-
     local msg = string.pack(">I4>Hs1s1", tmpmsgid, servertype_list.login, cmd, src_data)
+
+    send(fd, msg)
+end
+
+local function send2gate(fd, cmd, src_data)
+    src_data = src_data or ""
+    src_data = json.encode(src_data)
+    local tmpmsgid = get_msgid()
+    local msg = string.pack(">I4>Hs1s1", tmpmsgid, servertype_list.gate, cmd, src_data)
 
     send(fd, msg)
 end
@@ -112,28 +119,42 @@ end
 -- moon.async(do_connect)
 do_connect()
 
+local function do_ping()
+    if not clientfd then
+        return
+    end
+
+    print("~~~~ do_ping")
+    send2gate(clientfd, "ping")
+
+    moon.timeout(8000, do_ping)
+end
+
+local lg_data = {
+    account_name = "wm1",
+    password = "123456",
+    params = {
+        a = 1,
+        b = 2,
+    },
+    name = "哈哈"
+}
+
 socket.on("connect", function(fd, msg)
     print("connect ", fd, moon.decode(msg, "Z"))
 
     clientfd = fd
 
-    local param_t = {
-        account_name = "wm",
-        password = "123456",
-        params = {
-            a = 1,
-            b = 2,
-        },
-        name = "哈哈"
-    }
-
-    send2login(clientfd, "login", param_t)
+    send2login(clientfd, "login", lg_data)
+    do_ping()
 end)
 
 socket.on("message", function(fd, msg)
     local src_msg = moon.decode(msg, "Z")
     local nextpos = 0
     local cmd, nextpos = string.unpack("s1", src_msg, nextpos)
+
+    print_debug("receive msg cmd ", cmd)
 
     local func = commands[cmd]
 
@@ -158,28 +179,40 @@ socket.on("error", function(fd, msg)
     print("error ", fd, moon.decode(msg, "Z"))
 end)
 
+---
 function commands.login_result(data)
-    print(table.tostring(data))
-
     if data.result == 0 then
-        local param_t = {
-            account_name = "wm",
-            password = "123456",
-            params = {
-                a = 1,
-                b = 2,
-            },
-            name = "哈哈"
-        }
-
-        send2login(clientfd, "regist", param_t)
+        send2login(clientfd, "regist", lg_data)
+    elseif data.result == 1 then
+        this.login_after(data.gateinfo)
     end
 end
 
+---
 function commands.regist_result(data)
     if data.result == 0 then
         print(data.content)
+
+        this.login_after(data.gateinfo)
     elseif data.result == 1 then
         print(data.content)
+    end
+end
+
+local gate_servertime = -1
+function commands.pong(data)
+    gate_servertime = data.t
+    print("pong servertime = ", gate_servertime)
+end
+
+function this.login_after(gateinfo)
+    if HOST ~= gateinfo.host or PORT ~= gateinfo.port then
+        print("@@@@@@@@@@ login_after ")
+        HOST = gateinfo.host
+        PORT = gateinfo.port
+        msgid = 0
+        clientfd = nil
+
+        do_connect()
     end
 end

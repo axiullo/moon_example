@@ -1,13 +1,16 @@
 local moon = require("moon")
-local memorydata = require("memorydata")
+local memorydata = require("middle.memorydata")
 local socket = require("moon.socket")
 local message = wm_get_commands("message")
-local msend = require("msend")
+local msend = require("middle.msend")
 
-local login_list = memorydata.getobj("login_list")
+local server_list = memorydata.getobj("server_list")
 local this = {}
+local _wg = moon.exports
 
 function this.clitologin(req_info, msg)
+    local login_list = server_list["login"] or table.EMPTY
+
     if not next(login_list) then
         print_warn("no login_server link")
         return

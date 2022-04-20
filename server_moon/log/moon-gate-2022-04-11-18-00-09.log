@@ -1,0 +1,58 @@
+2022-04-11 18:00:09.995 | 12188     | INFO  | INIT with 6 workers.
+2022-04-11 18:00:09.995 | 12188     | INFO  | WORKER-1 RUN
+2022-04-11 18:00:09.996 | 12188     | INFO  | WORKER-2 RUN
+2022-04-11 18:00:09.996 | 9872      | INFO  | WORKER-1 START
+2022-04-11 18:00:09.996 | 12188     | INFO  | WORKER-3 RUN
+2022-04-11 18:00:09.996 | 16532     | INFO  | WORKER-2 START
+2022-04-11 18:00:09.996 | 12188     | INFO  | WORKER-4 RUN
+2022-04-11 18:00:09.996 | 644       | INFO  | WORKER-3 START
+2022-04-11 18:00:09.996 | 12188     | INFO  | WORKER-5 RUN
+2022-04-11 18:00:09.996 | 26836     | INFO  | WORKER-4 START
+2022-04-11 18:00:09.997 | 12188     | INFO  | WORKER-6 RUN
+2022-04-11 18:00:09.997 | 14164     | INFO  | WORKER-5 START
+2022-04-11 18:00:09.999 | 16736     | INFO  | WORKER-6 START
+2022-04-11 18:00:09.999 | 9872      | INFO  |  new_service 16777217
+2022-04-11 18:00:09.999 | 12188     | INFO  | server::run() state = 2
+2022-04-11 18:00:10.006 | 9872      | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+ (lua_service.cpp:107)
+2022-04-11 18:00:10.013 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-11 18:00:10.014 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-11 18:00:10.014 | 9872      | INFO  |  new_service 16777218
+2022-04-11 18:00:10.015 | 9872      | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;./middle/?.lua;'..package.path
+return {host='0.0.0.0',port=20520,base_name='gate',num=3,threadid=1,base_port=20520,file='service_gate.lua',unique=true,name='gate1',} (lua_service.cpp:107)
+2022-04-11 18:00:10.034 | :01000002 | INFO  | gate server start	gate1	0.0.0.0	20520	(service_gate.lua:90)
+2022-04-11 18:00:10.034 | :01000002 | INFO  | [WORKER 1] new service [gate1]
+2022-04-11 18:00:10.035 | 16532     | INFO  |  new_service 33554433
+2022-04-11 18:00:10.035 | 16532     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;./middle/?.lua;'..package.path
+return {host='0.0.0.0',port=20521,base_name='gate',num=3,threadid=2,base_port=20520,file='service_gate.lua',unique=true,name='gate2',} (lua_service.cpp:107)
+2022-04-11 18:00:10.038 | :02000001 | INFO  | gate server start	gate2	0.0.0.0	20521	(service_gate.lua:90)
+2022-04-11 18:00:10.038 | :02000001 | INFO  | [WORKER 2] new service [gate2]
+2022-04-11 18:00:10.038 | 644       | INFO  |  new_service 50331649
+2022-04-11 18:00:10.039 | 644       | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;./middle/?.lua;'..package.path
+return {host='0.0.0.0',port=20522,base_name='gate',num=3,threadid=3,base_port=20520,file='service_gate.lua',unique=true,name='gate3',} (lua_service.cpp:107)
+2022-04-11 18:00:10.044 | :03000001 | INFO  | gate server start	gate3	0.0.0.0	20522	(service_gate.lua:90)
+2022-04-11 18:00:10.044 | :03000001 | INFO  | [WORKER 3] new service [gate3]
+2022-04-11 18:00:10.044 | 26836     | INFO  |  new_service 67108865
+2022-04-11 18:00:10.047 | 26836     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;./middle/?.lua;'..package.path
+return {host='127.0.0.1',port=20620,base_name='ingate',name='ingate1',base_port=20620,num=2,unique=true,file='service_ingate.lua',} (lua_service.cpp:107)
+2022-04-11 18:00:10.052 | :04000001 | INFO  | ingate server start	ingate1	127.0.0.1	20620	(service_ingate.lua:105)
+2022-04-11 18:00:10.052 | :04000001 | INFO  | [WORKER 4] new service [ingate1]
+2022-04-11 18:00:10.052 | 14164     | INFO  |  new_service 83886081
+2022-04-11 18:00:10.053 | 14164     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;./middle/?.lua;'..package.path
+return {host='127.0.0.1',port=20621,base_name='ingate',name='ingate2',base_port=20620,num=2,unique=true,file='service_ingate.lua',} (lua_service.cpp:107)
+2022-04-11 18:00:10.056 | :05000001 | INFO  | ingate server start	ingate2	127.0.0.1	20621	(service_ingate.lua:105)
+2022-04-11 18:00:10.056 | :05000001 | INFO  | [WORKER 5] new service [ingate2]
+2022-04-11 18:01:35.493 | 12188     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-11 18:01:35.494 | :03000001 | INFO  | [WORKER 3] destroy service [gate3] 
+2022-04-11 18:01:35.494 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-11 18:01:35.494 | :02000001 | INFO  | [WORKER 2] destroy service [gate2] 
+2022-04-11 18:01:35.494 | :04000001 | INFO  | [WORKER 4] destroy service [ingate1] 
+2022-04-11 18:01:35.494 | :05000001 | INFO  | [WORKER 5] destroy service [ingate2] 
+2022-04-11 18:01:35.495 | :01000002 | INFO  | [WORKER 1] destroy service [gate1] 
+2022-04-11 18:01:35.496 | 16736     | INFO  | WORKER-6 STOP
+2022-04-11 18:01:35.496 | 14164     | INFO  | WORKER-5 STOP
+2022-04-11 18:01:35.496 | 26836     | INFO  | WORKER-4 STOP
+2022-04-11 18:01:35.496 | 644       | INFO  | WORKER-3 STOP
+2022-04-11 18:01:35.496 | 16532     | INFO  | WORKER-2 STOP
+2022-04-11 18:01:35.496 | 9872      | INFO  | WORKER-1 STOP
+2022-04-11 18:01:35.496 | 12188     | INFO  | STOP

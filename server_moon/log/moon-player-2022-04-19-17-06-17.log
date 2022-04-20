@@ -1,0 +1,64 @@
+2022-04-19 17:06:17.215 | 5548      | INFO  | INIT with 6 workers.
+2022-04-19 17:06:17.215 | 5548      | INFO  | WORKER-1 RUN
+2022-04-19 17:06:17.216 | 5548      | INFO  | WORKER-2 RUN
+2022-04-19 17:06:17.216 | 4248      | INFO  | WORKER-1 START
+2022-04-19 17:06:17.216 | 5548      | INFO  | WORKER-3 RUN
+2022-04-19 17:06:17.216 | 20264     | INFO  | WORKER-2 START
+2022-04-19 17:06:17.216 | 5548      | INFO  | WORKER-4 RUN
+2022-04-19 17:06:17.216 | 18264     | INFO  | WORKER-3 START
+2022-04-19 17:06:17.216 | 5548      | INFO  | WORKER-5 RUN
+2022-04-19 17:06:17.217 | 19028     | INFO  | WORKER-4 START
+2022-04-19 17:06:17.217 | 5548      | INFO  | WORKER-6 RUN
+2022-04-19 17:06:17.217 | 22844     | INFO  | WORKER-5 START
+2022-04-19 17:06:17.217 | 4248      | INFO  |  new_service 16777217
+2022-04-19 17:06:17.217 | 16748     | INFO  | WORKER-6 START
+2022-04-19 17:06:17.217 | 5548      | INFO  | server::run() state = 2
+2022-04-19 17:06:17.226 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 17:06:17.226 | 20264     | INFO  |  new_service 33554433
+2022-04-19 17:06:17.226 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 17:06:17.234 | :02000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 17:06:17.234 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:06:17.234 | :02000001 | INFO  | [WORKER 2] new service [player1]
+2022-04-19 17:06:17.234 | 18264     | INFO  |  new_service 50331649
+2022-04-19 17:06:17.235 | :02000001 | INFO  | connect	1	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 17:06:17.238 | :03000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 17:06:17.238 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:06:17.238 | :03000001 | INFO  | [WORKER 3] new service [player2]
+2022-04-19 17:06:17.239 | :03000001 | INFO  | connect	3	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 17:06:17.239 | 19028     | INFO  |  new_service 67108865
+2022-04-19 17:06:17.242 | :04000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 17:06:17.242 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:06:17.242 | :04000001 | INFO  | [WORKER 4] new service [player3]
+2022-04-19 17:06:17.243 | :04000001 | INFO  | connect	5	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 17:06:18.734 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:06:18.736 | :02000001 | INFO  | connect	7	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 17:06:18.736 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:06:18.738 | :03000001 | INFO  | connect	8	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 17:06:18.739 | :02000001 | INFO  | connect	9	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 17:06:18.740 | :03000001 | INFO  | connect	10	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 17:06:18.742 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 17:06:18.743 | :04000001 | INFO  | connect	11	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 17:06:18.744 | :04000001 | INFO  | connect	12	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 17:06:27.863 | :04000001 | INFO  | s2s_login_after	5	(G:\ddd\moon_example\server_moon\commands\player\player_commands.lua:9)
+2022-04-19 17:06:27.865 | :04000001 | INFO  | s2s_login_after	5	(G:\ddd\moon_example\server_moon\commands\player\player_commands.lua:9)
+2022-04-19 17:06:45.422 | :04000001 | INFO  | s2s_login_after	5	(G:\ddd\moon_example\server_moon\commands\player\player_commands.lua:9)
+2022-04-19 17:06:55.422 | :04000001 | INFO  | s2s_login_after	5	(G:\ddd\moon_example\server_moon\commands\player\player_commands.lua:9)
+2022-04-19 17:07:05.423 | :04000001 | INFO  | s2s_login_after	5	(G:\ddd\moon_example\server_moon\commands\player\player_commands.lua:9)
+2022-04-19 17:07:08.719 | :02000001 | INFO  | close 	9	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 17:07:08.719 | :03000001 | INFO  | close 	10	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 17:07:08.719 | :04000001 | INFO  | close 	12	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 17:07:08.720 | :02000001 | INFO  | close 	7	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 17:07:08.720 | :03000001 | INFO  | close 	8	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 17:07:08.720 | :04000001 | INFO  | close 	11	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 17:07:27.528 | 5548      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 17:07:27.528 | :03000001 | INFO  | [WORKER 3] destroy service [player2] 
+2022-04-19 17:07:27.528 | :02000001 | INFO  | [WORKER 2] destroy service [player1] 
+2022-04-19 17:07:27.528 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 17:07:27.528 | :04000001 | INFO  | [WORKER 4] destroy service [player3] 
+2022-04-19 17:07:27.530 | 16748     | INFO  | WORKER-6 STOP
+2022-04-19 17:07:27.530 | 22844     | INFO  | WORKER-5 STOP
+2022-04-19 17:07:27.530 | 19028     | INFO  | WORKER-4 STOP
+2022-04-19 17:07:27.530 | 18264     | INFO  | WORKER-3 STOP
+2022-04-19 17:07:27.530 | 20264     | INFO  | WORKER-2 STOP
+2022-04-19 17:07:27.530 | 4248      | INFO  | WORKER-1 STOP
+2022-04-19 17:07:27.531 | 5548      | INFO  | STOP

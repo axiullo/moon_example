@@ -1,0 +1,53 @@
+2022-04-19 14:47:16.715 | 17484     | INFO  | INIT with 6 workers.
+2022-04-19 14:47:16.715 | 17484     | INFO  | WORKER-1 RUN
+2022-04-19 14:47:16.716 | 17484     | INFO  | WORKER-2 RUN
+2022-04-19 14:47:16.716 | 20616     | INFO  | WORKER-1 START
+2022-04-19 14:47:16.716 | 17484     | INFO  | WORKER-3 RUN
+2022-04-19 14:47:16.716 | 7780      | INFO  | WORKER-2 START
+2022-04-19 14:47:16.716 | 17484     | INFO  | WORKER-4 RUN
+2022-04-19 14:47:16.716 | 18420     | INFO  | WORKER-3 START
+2022-04-19 14:47:16.716 | 17484     | INFO  | WORKER-5 RUN
+2022-04-19 14:47:16.717 | 23104     | INFO  | WORKER-4 START
+2022-04-19 14:47:16.717 | 17484     | INFO  | WORKER-6 RUN
+2022-04-19 14:47:16.717 | 20624     | INFO  | WORKER-5 START
+2022-04-19 14:47:16.717 | 20616     | INFO  |  new_service 16777217
+2022-04-19 14:47:16.717 | 10736     | INFO  | WORKER-6 START
+2022-04-19 14:47:16.717 | 17484     | INFO  | server::run() state = 2
+2022-04-19 14:47:16.726 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 14:47:16.727 | 7780      | INFO  |  new_service 33554433
+2022-04-19 14:47:16.727 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 14:47:18.745 | 7780      | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:47:18.745 | :02000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:47:18.745 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:18.745 | :02000001 | INFO  | [WORKER 2] new service [player1]
+2022-04-19 14:47:18.745 | 18420     | INFO  |  new_service 50331649
+2022-04-19 14:47:20.244 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:20.753 | 18420     | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:47:20.753 | :03000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:47:20.753 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:20.753 | :03000001 | INFO  | [WORKER 3] new service [player2]
+2022-04-19 14:47:20.753 | 23104     | INFO  |  new_service 67108865
+2022-04-19 14:47:21.745 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:22.253 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:22.758 | 23104     | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:47:22.758 | :04000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:47:22.758 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:22.758 | :04000001 | INFO  | [WORKER 4] new service [player3]
+2022-04-19 14:47:23.245 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:23.754 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:24.256 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:24.746 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:25.255 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:25.757 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:47:25.951 | 17484     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 14:47:25.951 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 14:47:25.951 | :04000001 | INFO  | [WORKER 4] destroy service [player3] 
+2022-04-19 14:47:25.951 | :03000001 | INFO  | [WORKER 3] destroy service [player2] 
+2022-04-19 14:47:25.951 | :02000001 | INFO  | [WORKER 2] destroy service [player1] 
+2022-04-19 14:47:25.953 | 10736     | INFO  | WORKER-6 STOP
+2022-04-19 14:47:25.954 | 20624     | INFO  | WORKER-5 STOP
+2022-04-19 14:47:25.954 | 23104     | INFO  | WORKER-4 STOP
+2022-04-19 14:47:25.954 | 18420     | INFO  | WORKER-3 STOP
+2022-04-19 14:47:25.954 | 7780      | INFO  | WORKER-2 STOP
+2022-04-19 14:47:25.954 | 20616     | INFO  | WORKER-1 STOP
+2022-04-19 14:47:25.954 | 17484     | INFO  | STOP

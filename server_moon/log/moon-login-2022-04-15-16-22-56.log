@@ -1,0 +1,37 @@
+2022-04-15 16:22:56.790 | 17212     | INFO  | INIT with 6 workers.
+2022-04-15 16:22:56.790 | 17212     | INFO  | WORKER-1 RUN
+2022-04-15 16:22:56.792 | 17212     | INFO  | WORKER-2 RUN
+2022-04-15 16:22:56.792 | 3560      | INFO  | WORKER-1 START
+2022-04-15 16:22:56.792 | 17212     | INFO  | WORKER-3 RUN
+2022-04-15 16:22:56.792 | 18064     | INFO  | WORKER-2 START
+2022-04-15 16:22:56.793 | 17212     | INFO  | WORKER-4 RUN
+2022-04-15 16:22:56.793 | 18228     | INFO  | WORKER-3 START
+2022-04-15 16:22:56.793 | 17212     | INFO  | WORKER-5 RUN
+2022-04-15 16:22:56.793 | 2644      | INFO  | WORKER-4 START
+2022-04-15 16:22:56.793 | 17212     | INFO  | WORKER-6 RUN
+2022-04-15 16:22:56.793 | 19964     | INFO  | WORKER-5 START
+2022-04-15 16:22:56.793 | 3560      | INFO  |  new_service 16777217
+2022-04-15 16:22:56.793 | 10844     | INFO  | WORKER-6 START
+2022-04-15 16:22:56.793 | 17212     | INFO  | server::run() state = 2
+2022-04-15 16:22:56.802 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-15 16:22:56.802 | 18064     | INFO  |  new_service 33554433
+2022-04-15 16:22:56.802 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-15 16:22:56.810 | :02000001 | INFO  | startup_check	(service_login.lua:149)
+2022-04-15 16:22:56.810 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-15 16:22:58.309 | :02000001 | INFO  | startup_check	(service_login.lua:149)
+2022-04-15 16:22:58.309 | :02000001 | INFO  | connect	2	127.0.0.1:20620	(service_login.lua:15)
+2022-04-15 16:22:58.310 | :02000001 | INFO  | connect	3	127.0.0.1:20621	(service_login.lua:15)
+2022-04-15 16:22:58.860 | :02000001 | INFO  | receive msg cmd = 	login	2	8	(service_login.lua:30)
+2022-04-15 16:23:15.485 | :02000001 | INFO  | receive msg cmd = 	login	3	9	(service_login.lua:30)
+2022-04-15 16:23:26.912 | :02000001 | INFO  | close 	3	127.0.0.1:20621	(service_login.lua:72)
+2022-04-15 16:23:26.912 | :02000001 | INFO  | close 	2	127.0.0.1:20620	(service_login.lua:72)
+2022-04-15 16:23:29.998 | 17212     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-15 16:23:29.998 | :02000001 | INFO  | [WORKER 2] destroy service [login1] 
+2022-04-15 16:23:29.998 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-15 16:23:30.000 | 10844     | INFO  | WORKER-6 STOP
+2022-04-15 16:23:30.000 | 19964     | INFO  | WORKER-5 STOP
+2022-04-15 16:23:30.000 | 2644      | INFO  | WORKER-4 STOP
+2022-04-15 16:23:30.000 | 18228     | INFO  | WORKER-3 STOP
+2022-04-15 16:23:30.000 | 18064     | INFO  | WORKER-2 STOP
+2022-04-15 16:23:30.000 | 3560      | INFO  | WORKER-1 STOP
+2022-04-15 16:23:30.000 | 17212     | INFO  | STOP

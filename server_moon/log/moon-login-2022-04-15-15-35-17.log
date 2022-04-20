@@ -1,0 +1,37 @@
+2022-04-15 15:35:17.337 | 14812     | INFO  | INIT with 6 workers.
+2022-04-15 15:35:17.337 | 14812     | INFO  | WORKER-1 RUN
+2022-04-15 15:35:17.338 | 14812     | INFO  | WORKER-2 RUN
+2022-04-15 15:35:17.338 | 22620     | INFO  | WORKER-1 START
+2022-04-15 15:35:17.338 | 14812     | INFO  | WORKER-3 RUN
+2022-04-15 15:35:17.339 | 17604     | INFO  | WORKER-2 START
+2022-04-15 15:35:17.339 | 14812     | INFO  | WORKER-4 RUN
+2022-04-15 15:35:17.339 | 9420      | INFO  | WORKER-3 START
+2022-04-15 15:35:17.339 | 14812     | INFO  | WORKER-5 RUN
+2022-04-15 15:35:17.339 | 23372     | INFO  | WORKER-4 START
+2022-04-15 15:35:17.339 | 14812     | INFO  | WORKER-6 RUN
+2022-04-15 15:35:17.339 | 21984     | INFO  | WORKER-5 START
+2022-04-15 15:35:17.339 | 22620     | INFO  |  new_service 16777217
+2022-04-15 15:35:17.339 | 12192     | INFO  | WORKER-6 START
+2022-04-15 15:35:17.339 | 14812     | INFO  | server::run() state = 2
+2022-04-15 15:35:17.348 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-15 15:35:17.348 | 17604     | INFO  |  new_service 33554433
+2022-04-15 15:35:17.348 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-15 15:35:17.355 | :02000001 | INFO  | startup_check	(service_login.lua:149)
+2022-04-15 15:35:17.355 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-15 15:35:18.855 | :02000001 | INFO  | startup_check	(service_login.lua:149)
+2022-04-15 15:35:18.855 | :02000001 | INFO  | connect	2	127.0.0.1:20620	(service_login.lua:15)
+2022-04-15 15:35:18.856 | :02000001 | INFO  | connect	3	127.0.0.1:20621	(service_login.lua:15)
+2022-04-15 15:35:20.220 | :02000001 | INFO  | error 	2	{"addr":"127.0.0.1:20620","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_login.lua:76)
+2022-04-15 15:35:20.220 | :02000001 | INFO  | close 	2	127.0.0.1:20620	(service_login.lua:72)
+2022-04-15 15:35:20.220 | :02000001 | INFO  | error 	3	{"addr":"127.0.0.1:20621","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_login.lua:76)
+2022-04-15 15:35:20.220 | :02000001 | INFO  | close 	3	127.0.0.1:20621	(service_login.lua:72)
+2022-04-15 15:37:41.364 | 14812     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-15 15:37:41.364 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-15 15:37:41.364 | :02000001 | INFO  | [WORKER 2] destroy service [login1] 
+2022-04-15 15:37:41.365 | 12192     | INFO  | WORKER-6 STOP
+2022-04-15 15:37:41.366 | 21984     | INFO  | WORKER-5 STOP
+2022-04-15 15:37:41.366 | 23372     | INFO  | WORKER-4 STOP
+2022-04-15 15:37:41.366 | 9420      | INFO  | WORKER-3 STOP
+2022-04-15 15:37:41.366 | 17604     | INFO  | WORKER-2 STOP
+2022-04-15 15:37:41.366 | 22620     | INFO  | WORKER-1 STOP
+2022-04-15 15:37:41.366 | 14812     | INFO  | STOP

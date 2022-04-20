@@ -1,0 +1,75 @@
+2022-04-19 14:50:21.358 | 13152     | INFO  | INIT with 6 workers.
+2022-04-19 14:50:21.358 | 13152     | INFO  | WORKER-1 RUN
+2022-04-19 14:50:21.359 | 13152     | INFO  | WORKER-2 RUN
+2022-04-19 14:50:21.359 | 21152     | INFO  | WORKER-1 START
+2022-04-19 14:50:21.359 | 13152     | INFO  | WORKER-3 RUN
+2022-04-19 14:50:21.359 | 10288     | INFO  | WORKER-2 START
+2022-04-19 14:50:21.360 | 13152     | INFO  | WORKER-4 RUN
+2022-04-19 14:50:21.360 | 8468      | INFO  | WORKER-3 START
+2022-04-19 14:50:21.360 | 13152     | INFO  | WORKER-5 RUN
+2022-04-19 14:50:21.360 | 11680     | INFO  | WORKER-4 START
+2022-04-19 14:50:21.360 | 13152     | INFO  | WORKER-6 RUN
+2022-04-19 14:50:21.360 | 528       | INFO  | WORKER-5 START
+2022-04-19 14:50:21.360 | 21152     | INFO  |  new_service 16777217
+2022-04-19 14:50:21.361 | 18528     | INFO  | WORKER-6 START
+2022-04-19 14:50:21.361 | 13152     | INFO  | server::run() state = 2
+2022-04-19 14:50:21.369 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 14:50:21.369 | 10288     | INFO  |  new_service 33554433
+2022-04-19 14:50:21.369 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 14:50:23.381 | 10288     | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:50:23.381 | :02000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:50:23.381 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:23.381 | :02000001 | INFO  | [WORKER 2] new service [player1]
+2022-04-19 14:50:23.381 | 8468      | INFO  |  new_service 50331649
+2022-04-19 14:50:24.880 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:25.387 | 8468      | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:50:25.387 | :03000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:50:25.388 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:25.388 | :03000001 | INFO  | [WORKER 3] new service [player2]
+2022-04-19 14:50:25.388 | 11680     | INFO  |  new_service 67108865
+2022-04-19 14:50:26.380 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:26.887 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:27.394 | 11680     | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:50:27.394 | :04000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:50:27.394 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:27.394 | :04000001 | INFO  | [WORKER 4] new service [player3]
+2022-04-19 14:50:27.881 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:28.387 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:28.894 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:29.381 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:29.888 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:30.395 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:30.882 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:31.389 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:31.896 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:32.383 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:32.890 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:33.397 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:34.391 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:34.897 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:35.382 | 10288     | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:50:35.382 | :02000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:50:35.382 | 10288     | WARN  | worker 2 handle one message(9) cost 2.002221, from 00000001 to 02000001 (worker.cpp:301)
+2022-04-19 14:50:35.382 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:36.397 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:36.883 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:37.389 | 8468      | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:50:37.389 | :03000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:50:37.389 | 8468      | WARN  | worker 3 handle one message(9) cost 2.001242, from 00000001 to 03000001 (worker.cpp:301)
+2022-04-19 14:50:37.389 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:38.143 | 13152     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 14:50:38.143 | :03000001 | INFO  | [WORKER 3] destroy service [player2] 
+2022-04-19 14:50:38.143 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 14:50:38.143 | :02000001 | INFO  | [WORKER 2] destroy service [player1] 
+2022-04-19 14:50:39.397 | 11680     | WARN  | connect 127.0.0.1:20701 failed: 由于目标计算机积极拒绝，无法连接。(10061) (socket.cpp:184)
+2022-04-19 14:50:39.397 | :04000001 | INFO  | *** todo reconnect login	1	127.0.0.1	20701	(service_player.lua:158)
+2022-04-19 14:50:39.397 | 11680     | WARN  | worker 4 handle one message(9) cost 2.004093, from 00000001 to 04000001 (worker.cpp:301)
+2022-04-19 14:50:39.397 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 14:50:39.397 | :04000001 | INFO  | [WORKER 4] destroy service [player3] 
+2022-04-19 14:50:39.399 | 18528     | INFO  | WORKER-6 STOP
+2022-04-19 14:50:39.399 | 528       | INFO  | WORKER-5 STOP
+2022-04-19 14:50:39.399 | 11680     | INFO  | WORKER-4 STOP
+2022-04-19 14:50:39.399 | 8468      | INFO  | WORKER-3 STOP
+2022-04-19 14:50:39.399 | 10288     | INFO  | WORKER-2 STOP
+2022-04-19 14:50:39.399 | 21152     | INFO  | WORKER-1 STOP
+2022-04-19 14:50:39.399 | 13152     | INFO  | STOP

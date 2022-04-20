@@ -1,0 +1,45 @@
+2022-04-12 18:01:50.219 | 3880      | INFO  | INIT with 6 workers.
+2022-04-12 18:01:50.219 | 3880      | INFO  | WORKER-1 RUN
+2022-04-12 18:01:50.220 | 3880      | INFO  | WORKER-2 RUN
+2022-04-12 18:01:50.220 | 4824      | INFO  | WORKER-1 START
+2022-04-12 18:01:50.220 | 3880      | INFO  | WORKER-3 RUN
+2022-04-12 18:01:50.220 | 25864     | INFO  | WORKER-2 START
+2022-04-12 18:01:50.220 | 3880      | INFO  | WORKER-4 RUN
+2022-04-12 18:01:50.220 | 24156     | INFO  | WORKER-3 START
+2022-04-12 18:01:50.220 | 3880      | INFO  | WORKER-5 RUN
+2022-04-12 18:01:50.220 | 21148     | INFO  | WORKER-4 START
+2022-04-12 18:01:50.220 | 3880      | INFO  | WORKER-6 RUN
+2022-04-12 18:01:50.220 | 19844     | INFO  | WORKER-5 START
+2022-04-12 18:01:50.221 | 5236      | INFO  | WORKER-6 START
+2022-04-12 18:01:50.221 | 4824      | INFO  |  new_service 16777217
+2022-04-12 18:01:50.221 | 3880      | INFO  | server::run() state = 2
+2022-04-12 18:01:50.227 | 4824      | WARN  | @@@  package.path='G:/ddd/moon_example/server_moon/lualib/?.lua;'..package.path
+ (lua_service.cpp:107)
+2022-04-12 18:01:50.232 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-12 18:01:50.233 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-12 18:01:50.233 | 4824      | INFO  |  new_service 16777218
+2022-04-12 18:01:50.234 | 4824      | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;'..package.path
+return {base_name='gate',name='gate1',unique=true,port=20520,num=3,threadid=1,host='0.0.0.0',base_port=20520,file='service_gate.lua',} (lua_service.cpp:107)
+2022-04-12 18:01:50.245 | :01000002 | INFO  | gate server start	gate1	0.0.0.0	20520	(service_gate.lua:120)
+2022-04-12 18:01:50.245 | :01000002 | INFO  | [WORKER 1] new service [gate1]
+2022-04-12 18:01:50.245 | 25864     | INFO  |  new_service 33554433
+2022-04-12 18:01:50.246 | 25864     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;'..package.path
+return {base_name='gate',name='gate2',unique=true,port=20521,num=3,threadid=2,host='0.0.0.0',base_port=20520,file='service_gate.lua',} (lua_service.cpp:107)
+2022-04-12 18:01:50.249 | :02000001 | INFO  | gate server start	gate2	0.0.0.0	20521	(service_gate.lua:120)
+2022-04-12 18:01:50.249 | :02000001 | INFO  | [WORKER 2] new service [gate2]
+2022-04-12 18:01:50.249 | 24156     | INFO  |  new_service 50331649
+2022-04-12 18:01:50.250 | 24156     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;'..package.path
+return {base_name='gate',name='gate3',unique=true,port=20522,num=3,threadid=3,host='0.0.0.0',base_port=20520,file='service_gate.lua',} (lua_service.cpp:107)
+2022-04-12 18:01:50.254 | :03000001 | INFO  | gate server start	gate3	0.0.0.0	20522	(service_gate.lua:120)
+2022-04-12 18:01:50.254 | :03000001 | INFO  | [WORKER 3] new service [gate3]
+2022-04-12 18:01:50.254 | 21148     | INFO  |  new_service 67108865
+2022-04-12 18:01:50.255 | 21148     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;'..package.path
+return {base_name='ingate',unique=true,name='ingate1',num=2,host='127.0.0.1',port=20620,base_port=20620,file='service_ingate.lua',} (lua_service.cpp:107)
+2022-04-12 18:01:50.259 | :04000001 | INFO  | ingate server start	ingate1	127.0.0.1	20620	(service_ingate.lua:105)
+2022-04-12 18:01:50.259 | :04000001 | INFO  | [WORKER 4] new service [ingate1]
+2022-04-12 18:01:50.259 | 19844     | INFO  |  new_service 83886081
+2022-04-12 18:01:50.260 | 19844     | WARN  | @@@  package.path='./lualib/?.lua;./wmlualib/?.lua;'..package.path
+return {base_name='ingate',unique=true,name='ingate2',num=2,host='127.0.0.1',port=20621,base_port=20620,file='service_ingate.lua',} (lua_service.cpp:107)
+2022-04-12 18:01:50.263 | :05000001 | INFO  | ingate server start	ingate2	127.0.0.1	20621	(service_ingate.lua:105)
+2022-04-12 18:01:50.263 | :05000001 | INFO  | [WORKER 5] new service [ingate2]
+2022-04-12 18:01:52.457 | :01000002 | INFO  | accept 	6	nil	10.6.60.234:12144	2	(service_gate.lua:32)

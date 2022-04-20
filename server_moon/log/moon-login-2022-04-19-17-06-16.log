@@ -1,0 +1,37 @@
+2022-04-19 17:06:16.255 | 8348      | INFO  | INIT with 6 workers.
+2022-04-19 17:06:16.255 | 8348      | INFO  | WORKER-1 RUN
+2022-04-19 17:06:16.258 | 8348      | INFO  | WORKER-2 RUN
+2022-04-19 17:06:16.258 | 8348      | INFO  | WORKER-3 RUN
+2022-04-19 17:06:16.258 | 7120      | INFO  | WORKER-1 START
+2022-04-19 17:06:16.258 | 8348      | INFO  | WORKER-4 RUN
+2022-04-19 17:06:16.258 | 21364     | INFO  | WORKER-2 START
+2022-04-19 17:06:16.258 | 13128     | INFO  | WORKER-3 START
+2022-04-19 17:06:16.258 | 8348      | INFO  | WORKER-5 RUN
+2022-04-19 17:06:16.259 | 7084      | INFO  | WORKER-4 START
+2022-04-19 17:06:16.259 | 8348      | INFO  | WORKER-6 RUN
+2022-04-19 17:06:16.259 | 7104      | INFO  | WORKER-5 START
+2022-04-19 17:06:16.259 | 7120      | INFO  |  new_service 16777217
+2022-04-19 17:06:16.259 | 18508     | INFO  | WORKER-6 START
+2022-04-19 17:06:16.259 | 8348      | INFO  | server::run() state = 2
+2022-04-19 17:06:16.267 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 17:06:16.268 | 21364     | INFO  |  new_service 33554433
+2022-04-19 17:06:16.268 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 17:06:16.278 | :02000001 | INFO  | login server start	login1	127.0.0.1	20701	(service_login.lua:189)
+2022-04-19 17:06:16.278 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 17:06:16.278 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-19 17:06:17.234 | :02000001 | INFO  | sys	regist_server	3	player	player1	(G:\ddd\moon_example\server_moon\commands\login\login_commands.lua:95)
+2022-04-19 17:06:17.238 | :02000001 | INFO  | sys	regist_server	4	player	player2	(G:\ddd\moon_example\server_moon\commands\login\login_commands.lua:95)
+2022-04-19 17:06:17.242 | :02000001 | INFO  | sys	regist_server	5	player	player3	(G:\ddd\moon_example\server_moon\commands\login\login_commands.lua:95)
+2022-04-19 17:06:17.778 | :02000001 | INFO  | startup_check	(service_login.lua:170)
+2022-04-19 17:06:17.778 | :02000001 | INFO  | connect	6	127.0.0.1:20620	(service_login.lua:19)
+2022-04-19 17:06:17.779 | :02000001 | INFO  | connect	7	127.0.0.1:20621	(service_login.lua:19)
+2022-04-19 17:06:27.862 | :02000001 | INFO  | receive msg cmd = 	login	6	14	(service_login.lua:34)
+2022-04-19 17:06:27.864 | :02000001 | INFO  | receive msg cmd = 	login	7	15	(service_login.lua:34)
+2022-04-19 17:06:45.420 | :02000001 | INFO  | receive msg cmd = 	login	6	16	(service_login.lua:34)
+2022-04-19 17:06:55.421 | :02000001 | INFO  | receive msg cmd = 	login	7	17	(service_login.lua:34)
+2022-04-19 17:07:05.422 | :02000001 | INFO  | receive msg cmd = 	login	6	18	(service_login.lua:34)
+2022-04-19 17:07:08.719 | :02000001 | INFO  | close 	7	127.0.0.1:20621	(service_login.lua:93)
+2022-04-19 17:07:08.719 | :02000001 | INFO  | close 	6	127.0.0.1:20620	(service_login.lua:93)
+2022-04-19 17:07:27.530 | :02000001 | INFO  | close 	5	127.0.0.1:9448	(service_login.lua:93)
+2022-04-19 17:07:27.530 | :02000001 | INFO  | close 	4	127.0.0.1:9446	(service_login.lua:93)
+2022-04-19 17:07:27.530 | :02000001 | INFO  | close 	3	127.0.0.1:9444	(service_login.lua:93)

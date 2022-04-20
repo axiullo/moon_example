@@ -1,0 +1,113 @@
+2022-04-19 14:50:01.781 | 9872      | INFO  | INIT with 6 workers.
+2022-04-19 14:50:01.781 | 9872      | INFO  | WORKER-1 RUN
+2022-04-19 14:50:01.782 | 9872      | INFO  | WORKER-2 RUN
+2022-04-19 14:50:01.782 | 12116     | INFO  | WORKER-1 START
+2022-04-19 14:50:01.782 | 9872      | INFO  | WORKER-3 RUN
+2022-04-19 14:50:01.782 | 2572      | INFO  | WORKER-2 START
+2022-04-19 14:50:01.782 | 9872      | INFO  | WORKER-4 RUN
+2022-04-19 14:50:01.783 | 8716      | INFO  | WORKER-3 START
+2022-04-19 14:50:01.783 | 9872      | INFO  | WORKER-5 RUN
+2022-04-19 14:50:01.783 | 1496      | INFO  | WORKER-4 START
+2022-04-19 14:50:01.783 | 9872      | INFO  | WORKER-6 RUN
+2022-04-19 14:50:01.784 | 5516      | INFO  | WORKER-5 START
+2022-04-19 14:50:01.784 | 12116     | INFO  |  new_service 16777217
+2022-04-19 14:50:01.784 | 13444     | INFO  | WORKER-6 START
+2022-04-19 14:50:01.785 | 9872      | INFO  | server::run() state = 2
+2022-04-19 14:50:01.793 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 14:50:01.794 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 14:50:01.794 | 12116     | INFO  |  new_service 16777218
+2022-04-19 14:50:01.806 | :01000002 | INFO  | gate server start	gate1	10.6.60.234	20520	(service_gate.lua:136)
+2022-04-19 14:50:01.806 | :01000002 | INFO  | [WORKER 1] new service [gate1]
+2022-04-19 14:50:01.806 | 2572      | INFO  |  new_service 33554433
+2022-04-19 14:50:01.808 | :02000001 | INFO  | gate server start	gate2	10.6.60.234	20521	(service_gate.lua:136)
+2022-04-19 14:50:01.808 | :02000001 | INFO  | [WORKER 2] new service [gate2]
+2022-04-19 14:50:01.808 | 8716      | INFO  |  new_service 50331649
+2022-04-19 14:50:01.812 | :03000001 | INFO  | gate server start	gate3	10.6.60.234	20522	(service_gate.lua:136)
+2022-04-19 14:50:01.812 | :03000001 | INFO  | [WORKER 3] new service [gate3]
+2022-04-19 14:50:01.812 | 1496      | INFO  |  new_service 67108865
+2022-04-19 14:50:01.816 | :04000001 | INFO  | ingate server start	ingate1	127.0.0.1	20620	(service_ingate.lua:107)
+2022-04-19 14:50:01.816 | :04000001 | INFO  | [WORKER 4] new service [ingate1]
+2022-04-19 14:50:01.816 | 5516      | INFO  |  new_service 83886081
+2022-04-19 14:50:01.819 | :05000001 | INFO  | ingate server start	ingate2	127.0.0.1	20621	(service_ingate.lua:107)
+2022-04-19 14:50:01.819 | :05000001 | INFO  | [WORKER 5] new service [ingate2]
+2022-04-19 14:50:11.873 | :04000001 | INFO  | accept 	6	nil	127.0.0.1:3613	2	(service_ingate.lua:55)
+2022-04-19 14:50:11.873 | :04000001 | INFO  | sys	regist_server	6	login	login1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 14:50:11.874 | :05000001 | INFO  | accept 	7	nil	127.0.0.1:3614	2	(service_ingate.lua:55)
+2022-04-19 14:50:11.874 | :05000001 | INFO  | sys	regist_server	7	login	login1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 14:57:55.797 | :04000001 | INFO  | close 	6	127.0.0.1:3613	(service_ingate.lua:88)
+2022-04-19 14:57:55.797 | :04000001 | INFO  | server fd closed	login	login1	(service_ingate.lua:94)
+2022-04-19 14:57:55.797 | :05000001 | INFO  | close 	7	127.0.0.1:3614	(service_ingate.lua:88)
+2022-04-19 14:57:55.797 | :05000001 | INFO  | server fd closed	login	login1	(service_ingate.lua:94)
+2022-04-19 14:58:43.504 | :04000001 | INFO  | accept 	8	nil	127.0.0.1:2621	2	(service_ingate.lua:55)
+2022-04-19 14:58:43.505 | :04000001 | INFO  | sys	regist_server	8	login	login1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 14:58:43.505 | :05000001 | INFO  | accept 	9	nil	127.0.0.1:2622	2	(service_ingate.lua:55)
+2022-04-19 14:58:43.505 | :05000001 | INFO  | sys	regist_server	9	login	login1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 14:58:52.649 | :04000001 | INFO  | accept 	10	nil	127.0.0.1:2638	2	(service_ingate.lua:55)
+2022-04-19 14:58:52.651 | :04000001 | INFO  | close 	10	transfer_func not exist!	1	(service_ingate.lua:73)
+2022-04-19 14:58:52.651 | :05000001 | INFO  | accept 	11	nil	127.0.0.1:2639	2	(service_ingate.lua:55)
+2022-04-19 14:58:52.653 | :04000001 | INFO  | error 	10	{"addr":"","errcode":10009,"errmsg":"提供的文件句柄无效。"}	(service_ingate.lua:101)
+2022-04-19 14:58:52.653 | :04000001 | INFO  | close 	10	nil	(service_ingate.lua:88)
+2022-04-19 14:58:52.653 | :05000001 | INFO  | close 	11	transfer_func not exist!	1	(service_ingate.lua:73)
+2022-04-19 14:58:52.654 | :04000001 | INFO  | accept 	12	nil	127.0.0.1:2640	2	(service_ingate.lua:55)
+2022-04-19 14:58:52.655 | :05000001 | INFO  | error 	11	{"addr":"","errcode":10009,"errmsg":"提供的文件句柄无效。"}	(service_ingate.lua:101)
+2022-04-19 14:58:52.655 | :05000001 | INFO  | close 	11	nil	(service_ingate.lua:88)
+2022-04-19 14:58:52.655 | :04000001 | INFO  | close 	12	transfer_func not exist!	1	(service_ingate.lua:73)
+2022-04-19 14:58:52.655 | :04000001 | INFO  | error 	12	{"addr":"","errcode":10009,"errmsg":"提供的文件句柄无效。"}	(service_ingate.lua:101)
+2022-04-19 14:58:52.655 | :04000001 | INFO  | close 	12	nil	(service_ingate.lua:88)
+2022-04-19 14:58:52.656 | :05000001 | INFO  | accept 	13	nil	127.0.0.1:2641	2	(service_ingate.lua:55)
+2022-04-19 14:58:52.657 | :04000001 | INFO  | accept 	14	nil	127.0.0.1:2642	2	(service_ingate.lua:55)
+2022-04-19 14:58:52.658 | :05000001 | INFO  | close 	13	transfer_func not exist!	1	(service_ingate.lua:73)
+2022-04-19 14:58:52.658 | :05000001 | INFO  | error 	13	{"addr":"","errcode":10009,"errmsg":"提供的文件句柄无效。"}	(service_ingate.lua:101)
+2022-04-19 14:58:52.658 | :05000001 | INFO  | close 	13	nil	(service_ingate.lua:88)
+2022-04-19 14:58:52.659 | :04000001 | INFO  | close 	14	transfer_func not exist!	1	(service_ingate.lua:73)
+2022-04-19 14:58:52.659 | :04000001 | INFO  | error 	14	{"addr":"","errcode":10009,"errmsg":"提供的文件句柄无效。"}	(service_ingate.lua:101)
+2022-04-19 14:58:52.659 | :04000001 | INFO  | close 	14	nil	(service_ingate.lua:88)
+2022-04-19 14:58:52.660 | :05000001 | INFO  | accept 	15	nil	127.0.0.1:2643	2	(service_ingate.lua:55)
+2022-04-19 14:58:52.661 | :05000001 | INFO  | close 	15	transfer_func not exist!	1	(service_ingate.lua:73)
+2022-04-19 14:58:52.661 | :05000001 | INFO  | error 	15	{"addr":"","errcode":10009,"errmsg":"提供的文件句柄无效。"}	(service_ingate.lua:101)
+2022-04-19 14:58:52.661 | :05000001 | INFO  | close 	15	nil	(service_ingate.lua:88)
+2022-04-19 15:06:39.379 | :04000001 | INFO  | accept 	16	nil	127.0.0.1:4404	2	(service_ingate.lua:55)
+2022-04-19 15:06:39.380 | :04000001 | INFO  | sys	regist_server	16	player	player1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 15:06:39.380 | :05000001 | INFO  | accept 	17	nil	127.0.0.1:4405	2	(service_ingate.lua:55)
+2022-04-19 15:06:39.381 | :05000001 | INFO  | sys	regist_server	17	player	player1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 15:06:39.382 | :04000001 | INFO  | accept 	18	nil	127.0.0.1:4406	2	(service_ingate.lua:55)
+2022-04-19 15:06:39.383 | :04000001 | INFO  | sys	regist_server	18	player	player2	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 15:06:39.384 | :05000001 | INFO  | accept 	19	nil	127.0.0.1:4407	2	(service_ingate.lua:55)
+2022-04-19 15:06:39.384 | :05000001 | INFO  | sys	regist_server	19	player	player2	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 15:06:39.385 | :04000001 | INFO  | accept 	20	nil	127.0.0.1:4408	2	(service_ingate.lua:55)
+2022-04-19 15:06:39.386 | :04000001 | INFO  | sys	regist_server	20	player	player3	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 15:06:39.386 | :05000001 | INFO  | accept 	21	nil	127.0.0.1:4409	2	(service_ingate.lua:55)
+2022-04-19 15:06:39.386 | :05000001 | INFO  | sys	regist_server	21	player	player3	(G:\ddd\moon_example\server_moon\ingate_commands.lua:24)
+2022-04-19 15:08:17.649 | :03000001 | INFO  | accept 	22	nil	10.6.60.234:4536	2	(service_gate.lua:33)
+2022-04-19 15:08:17.650 | :03000001 | DEBUG | @@@@@ local_dispatch	22	ping	(service_gate.lua:57)
+2022-04-19 15:08:17.650 | :04000001 | INFO  | =================== CLITOSER dispatch	22	50331649	 eloginQ{"account_name":"wm1","name":"鍝堝搱","password":"123456","params":{"b":2,"a":1}}	(G:\ddd\moon_example\server_moon\regist_protocol.lua:18)
+2022-04-19 15:08:17.651 | :03000001 | INFO  | =================== SRV2CLI dispatch	(G:\ddd\moon_example\server_moon\regist_protocol.lua:44)
+2022-04-19 15:08:17.651 | :03000001 | INFO  | 22	(G:\ddd\moon_example\server_moon\regist_protocol.lua:49)
+2022-04-19 15:08:17.651 | :03000001 | INFO  | login_resultx{"gateinfo":{"base_name":"gate","n":3,"host":"10.6.60.234","port":20523},"result":1,"d":123456,"content":"鐧诲綍鎴愬姛"}	(G:\ddd\moon_example\server_moon\regist_protocol.lua:50)
+2022-04-19 15:08:17.651 | :04000001 | INFO  | error	./lualib/base\table.lua:225: bad argument #1 to 'for iterator' (table expected, got string)
+stack traceback:
+	[C]: in function 'next',	 params:
+	./lualib/base\table.lua:225: in function 'table.findKeyByValue',	 params: tbl = player4;
+	G:\ddd\moon_example\server_moon\ingate_commands.lua:40: in local 'func',	 params: fd = 8;
+	service_ingate.lua:39: in function <service_ingate.lua:27>,	 params: fd = 8;
+	[C]: in function 'xpcall',	 params:
+	service_ingate.lua:78: in function <service_ingate.lua:77>,	 params:
+	[C]: in function 'pcall',	 params:
+	./lualib/moon.lua:283: in upvalue 'invoke',	 params: co = thread: 0000019CBB04BC98;
+	./lualib/moon.lua:298: in function <./lualib/moon.lua:293>,	 params: fn = function: 0000019CBB0583B0;	(service_ingate.lua:81)
+2022-04-19 15:08:31.835 | :03000001 | INFO  | error 	22	{"addr":"10.6.60.234:4536","errcode":800003,"errmsg":"Socket read timeout"}	(service_gate.lua:130)
+2022-04-19 15:08:31.835 | :03000001 | INFO  | close 	22	10.6.60.234:4536	(service_gate.lua:126)
+2022-04-19 15:08:33.904 | 9872      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 15:08:33.904 | :04000001 | INFO  | [WORKER 4] destroy service [ingate1] 
+2022-04-19 15:08:33.904 | :05000001 | INFO  | [WORKER 5] destroy service [ingate2] 
+2022-04-19 15:08:33.904 | :03000001 | INFO  | [WORKER 3] destroy service [gate3] 
+2022-04-19 15:08:33.904 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 15:08:33.904 | :02000001 | INFO  | [WORKER 2] destroy service [gate2] 
+2022-04-19 15:08:33.904 | :01000002 | INFO  | [WORKER 1] destroy service [gate1] 
+2022-04-19 15:08:33.906 | 13444     | INFO  | WORKER-6 STOP
+2022-04-19 15:08:33.906 | 5516      | INFO  | WORKER-5 STOP
+2022-04-19 15:08:33.906 | 1496      | INFO  | WORKER-4 STOP
+2022-04-19 15:08:33.907 | 8716      | INFO  | WORKER-3 STOP
+2022-04-19 15:08:33.907 | 2572      | INFO  | WORKER-2 STOP
+2022-04-19 15:08:33.907 | 12116     | INFO  | WORKER-1 STOP
+2022-04-19 15:08:33.907 | 9872      | INFO  | STOP

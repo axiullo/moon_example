@@ -1,0 +1,36 @@
+2022-04-19 17:02:48.211 | 21876     | INFO  | INIT with 6 workers.
+2022-04-19 17:02:48.211 | 21876     | INFO  | WORKER-1 RUN
+2022-04-19 17:02:48.213 | 21876     | INFO  | WORKER-2 RUN
+2022-04-19 17:02:48.213 | 21184     | INFO  | WORKER-1 START
+2022-04-19 17:02:48.213 | 21876     | INFO  | WORKER-3 RUN
+2022-04-19 17:02:48.213 | 15556     | INFO  | WORKER-2 START
+2022-04-19 17:02:48.213 | 21876     | INFO  | WORKER-4 RUN
+2022-04-19 17:02:48.213 | 20064     | INFO  | WORKER-3 START
+2022-04-19 17:02:48.213 | 21876     | INFO  | WORKER-5 RUN
+2022-04-19 17:02:48.213 | 17340     | INFO  | WORKER-4 START
+2022-04-19 17:02:48.213 | 21876     | INFO  | WORKER-6 RUN
+2022-04-19 17:02:48.214 | 13056     | INFO  | WORKER-5 START
+2022-04-19 17:02:48.214 | 21184     | INFO  |  new_service 16777217
+2022-04-19 17:02:48.214 | 22232     | INFO  | WORKER-6 START
+2022-04-19 17:02:48.214 | 21876     | INFO  | server::run() state = 2
+2022-04-19 17:02:48.223 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 17:02:48.223 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 17:02:48.223 | 21184     | INFO  |  new_service 16777218
+2022-04-19 17:02:48.230 | :01000002 | INFO  | gate server start	gate1	10.6.60.234	20520	(service_gate.lua:136)
+2022-04-19 17:02:48.230 | :01000002 | INFO  | [WORKER 1] new service [gate1]
+2022-04-19 17:02:48.230 | 15556     | INFO  |  new_service 33554433
+2022-04-19 17:02:48.233 | :02000001 | INFO  | gate server start	gate2	10.6.60.234	20521	(service_gate.lua:136)
+2022-04-19 17:02:48.233 | :02000001 | INFO  | [WORKER 2] new service [gate2]
+2022-04-19 17:02:48.233 | 20064     | INFO  |  new_service 50331649
+2022-04-19 17:02:48.235 | :03000001 | INFO  | gate server start	gate3	10.6.60.234	20522	(service_gate.lua:136)
+2022-04-19 17:02:48.235 | :03000001 | INFO  | [WORKER 3] new service [gate3]
+2022-04-19 17:02:48.235 | 17340     | INFO  |  new_service 67108865
+2022-04-19 17:02:48.239 | :04000001 | INFO  | ingate server start	ingate1	127.0.0.1	20620	(service_ingate.lua:113)
+2022-04-19 17:02:48.239 | :04000001 | INFO  | [WORKER 4] new service [ingate1]
+2022-04-19 17:02:48.239 | 13056     | INFO  |  new_service 83886081
+2022-04-19 17:02:48.241 | :05000001 | INFO  | ingate server start	ingate2	127.0.0.1	20621	(service_ingate.lua:113)
+2022-04-19 17:02:48.241 | :05000001 | INFO  | [WORKER 5] new service [ingate2]
+2022-04-19 17:02:53.953 | :04000001 | INFO  | accept 	6	nil	127.0.0.1:9093	2	(service_ingate.lua:61)
+2022-04-19 17:02:53.954 | :04000001 | INFO  | sys	regist_server	6	login	login1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:25)
+2022-04-19 17:02:53.954 | :05000001 | INFO  | accept 	7	nil	127.0.0.1:9094	2	(service_ingate.lua:61)
+2022-04-19 17:02:53.954 | :05000001 | INFO  | sys	regist_server	7	login	login1	(G:\ddd\moon_example\server_moon\ingate_commands.lua:25)

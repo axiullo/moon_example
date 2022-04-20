@@ -1,0 +1,46 @@
+2022-04-18 15:51:27.740 | 2584      | INFO  | INIT with 6 workers.
+2022-04-18 15:51:27.740 | 2584      | INFO  | WORKER-1 RUN
+2022-04-18 15:51:27.740 | 2584      | INFO  | WORKER-2 RUN
+2022-04-18 15:51:27.740 | 18228     | INFO  | WORKER-1 START
+2022-04-18 15:51:27.741 | 2584      | INFO  | WORKER-3 RUN
+2022-04-18 15:51:27.741 | 19112     | INFO  | WORKER-2 START
+2022-04-18 15:51:27.741 | 2584      | INFO  | WORKER-4 RUN
+2022-04-18 15:51:27.741 | 16864     | INFO  | WORKER-3 START
+2022-04-18 15:51:27.741 | 2584      | INFO  | WORKER-5 RUN
+2022-04-18 15:51:27.741 | 4476      | INFO  | WORKER-4 START
+2022-04-18 15:51:27.741 | 2584      | INFO  | WORKER-6 RUN
+2022-04-18 15:51:27.741 | 16316     | INFO  | WORKER-5 START
+2022-04-18 15:51:27.741 | 18228     | INFO  |  new_service 16777217
+2022-04-18 15:51:27.741 | 21072     | INFO  | WORKER-6 START
+2022-04-18 15:51:27.742 | 2584      | INFO  | server::run() state = 2
+2022-04-18 15:51:27.750 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-18 15:51:27.750 | 19112     | INFO  |  new_service 33554433
+2022-04-18 15:51:27.750 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-18 15:51:27.758 | :02000001 | INFO  | startup_check	(service_login.lua:167)
+2022-04-18 15:51:27.758 | :02000001 | INFO  | [WORKER 2] new service [login1]
+2022-04-18 15:51:29.258 | :02000001 | INFO  | startup_check	(service_login.lua:167)
+2022-04-18 15:51:29.259 | :02000001 | INFO  | connect	2	127.0.0.1:20620	(service_login.lua:16)
+2022-04-18 15:51:29.261 | :02000001 | INFO  | connect	3	127.0.0.1:20621	(service_login.lua:16)
+2022-04-18 15:51:29.474 | :02000001 | INFO  | receive msg cmd = 	login	2	8	(service_login.lua:31)
+2022-04-18 15:51:29.475 | :02000001 | INFO  | receive msg cmd = 	regist	2	8	(service_login.lua:31)
+2022-04-18 15:51:29.518 | :02000001 | INFO  | 
+dump from: ...on_example\server_moon\commands\login\login_commands.lua:51: in local 'func',	 params: req_info = table: 000001C7A97E7610; msg = table: 000001C7A97E7690; data = nil; insertdata = table: 000001C7A97E8250; res = table: 000001C7A97E82D0;
+
+ <var> = {
+     affected_rows   = 1,
+     insert_id       = 5,
+     server_status   = 2,
+     warning_count   = 0,
+ },	(./lualib/base\util.lua:84)
+2022-04-18 15:57:12.480 | :02000001 | INFO  | close 	3	127.0.0.1:20621	(service_login.lua:90)
+2022-04-18 15:57:12.480 | :02000001 | INFO  | close 	2	127.0.0.1:20620	(service_login.lua:90)
+2022-04-18 15:57:15.012 | 2584      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-18 15:57:15.012 | :02000001 | INFO  | [WORKER 2] destroy service [login1] 
+2022-04-18 15:57:15.012 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-18 15:57:15.014 | 21072     | INFO  | WORKER-6 STOP
+2022-04-18 15:57:15.014 | 16316     | INFO  | WORKER-5 STOP
+2022-04-18 15:57:15.014 | 4476      | INFO  | WORKER-4 STOP
+2022-04-18 15:57:15.014 | 16864     | INFO  | WORKER-3 STOP
+2022-04-18 15:57:15.014 | 19112     | INFO  | WORKER-2 STOP
+2022-04-18 15:57:15.014 | 18228     | INFO  | WORKER-1 STOP
+2022-04-18 15:57:15.014 | 2584      | INFO  | STOP

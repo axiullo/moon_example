@@ -1,0 +1,65 @@
+2022-04-19 15:33:41.126 | 16548     | INFO  | INIT with 6 workers.
+2022-04-19 15:33:41.126 | 16548     | INFO  | WORKER-1 RUN
+2022-04-19 15:33:41.128 | 16548     | INFO  | WORKER-2 RUN
+2022-04-19 15:33:41.128 | 4296      | INFO  | WORKER-1 START
+2022-04-19 15:33:41.128 | 16548     | INFO  | WORKER-3 RUN
+2022-04-19 15:33:41.128 | 11812     | INFO  | WORKER-2 START
+2022-04-19 15:33:41.128 | 16548     | INFO  | WORKER-4 RUN
+2022-04-19 15:33:41.128 | 12236     | INFO  | WORKER-3 START
+2022-04-19 15:33:41.128 | 16548     | INFO  | WORKER-5 RUN
+2022-04-19 15:33:41.129 | 22184     | INFO  | WORKER-4 START
+2022-04-19 15:33:41.129 | 16548     | INFO  | WORKER-6 RUN
+2022-04-19 15:33:41.129 | 3656      | INFO  | WORKER-5 START
+2022-04-19 15:33:41.129 | 4296      | INFO  |  new_service 16777217
+2022-04-19 15:33:41.129 | 5220      | INFO  | WORKER-6 START
+2022-04-19 15:33:41.130 | 16548     | INFO  | server::run() state = 2
+2022-04-19 15:33:41.138 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 15:33:41.138 | 11812     | INFO  |  new_service 33554433
+2022-04-19 15:33:41.138 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 15:33:41.147 | :02000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 15:33:41.147 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 15:33:41.147 | :02000001 | INFO  | [WORKER 2] new service [player1]
+2022-04-19 15:33:41.147 | :02000001 | INFO  | connect	1	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 15:33:41.147 | 12236     | INFO  |  new_service 50331649
+2022-04-19 15:33:41.153 | :03000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 15:33:41.153 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 15:33:41.153 | :03000001 | INFO  | [WORKER 3] new service [player2]
+2022-04-19 15:33:41.153 | 22184     | INFO  |  new_service 67108865
+2022-04-19 15:33:41.153 | :03000001 | INFO  | connect	3	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 15:33:41.157 | :04000001 | INFO  | login_check success!	(service_player.lua:138)
+2022-04-19 15:33:41.157 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 15:33:41.157 | :04000001 | INFO  | [WORKER 4] new service [player3]
+2022-04-19 15:33:41.157 | :04000001 | INFO  | connect	5	127.0.0.1:20701	(service_player.lua:16)
+2022-04-19 15:33:42.645 | :02000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 15:33:42.645 | :02000001 | INFO  | connect	7	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 15:33:42.646 | :02000001 | INFO  | connect	8	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 15:33:42.651 | :03000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 15:33:42.651 | :03000001 | INFO  | connect	9	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 15:33:42.652 | :03000001 | INFO  | connect	10	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 15:33:42.655 | :04000001 | INFO  | startup_check	(service_player.lua:219)
+2022-04-19 15:33:42.655 | :04000001 | INFO  | connect	11	127.0.0.1:20620	(service_player.lua:16)
+2022-04-19 15:33:42.655 | :04000001 | INFO  | connect	12	127.0.0.1:20621	(service_player.lua:16)
+2022-04-19 15:33:47.076 | :02000001 | INFO  | error 	7	{"addr":"127.0.0.1:20620","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_player.lua:100)
+2022-04-19 15:33:47.076 | :02000001 | INFO  | close 	7	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 15:33:47.076 | :04000001 | INFO  | error 	11	{"addr":"127.0.0.1:20620","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_player.lua:100)
+2022-04-19 15:33:47.076 | :04000001 | INFO  | close 	11	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 15:33:47.076 | :03000001 | INFO  | error 	9	{"addr":"127.0.0.1:20620","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_player.lua:100)
+2022-04-19 15:33:47.076 | :03000001 | INFO  | close 	9	127.0.0.1:20620	(service_player.lua:90)
+2022-04-19 15:33:47.076 | :02000001 | INFO  | error 	8	{"addr":"127.0.0.1:20621","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_player.lua:100)
+2022-04-19 15:33:47.076 | :02000001 | INFO  | close 	8	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 15:33:47.076 | :04000001 | INFO  | error 	12	{"addr":"127.0.0.1:20621","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_player.lua:100)
+2022-04-19 15:33:47.076 | :04000001 | INFO  | close 	12	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 15:33:47.076 | :03000001 | INFO  | error 	10	{"addr":"127.0.0.1:20621","errcode":10054,"errmsg":"远程主机强迫关闭了一个现有的连接。"}	(service_player.lua:100)
+2022-04-19 15:33:47.076 | :03000001 | INFO  | close 	10	127.0.0.1:20621	(service_player.lua:90)
+2022-04-19 15:33:55.544 | 16548     | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 15:33:55.544 | :04000001 | INFO  | [WORKER 4] destroy service [player3] 
+2022-04-19 15:33:55.544 | :03000001 | INFO  | [WORKER 3] destroy service [player2] 
+2022-04-19 15:33:55.544 | :02000001 | INFO  | [WORKER 2] destroy service [player1] 
+2022-04-19 15:33:55.544 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 15:33:55.546 | 5220      | INFO  | WORKER-6 STOP
+2022-04-19 15:33:55.546 | 3656      | INFO  | WORKER-5 STOP
+2022-04-19 15:33:55.546 | 22184     | INFO  | WORKER-4 STOP
+2022-04-19 15:33:55.546 | 12236     | INFO  | WORKER-3 STOP
+2022-04-19 15:33:55.546 | 11812     | INFO  | WORKER-2 STOP
+2022-04-19 15:33:55.546 | 4296      | INFO  | WORKER-1 STOP
+2022-04-19 15:33:55.547 | 16548     | INFO  | STOP

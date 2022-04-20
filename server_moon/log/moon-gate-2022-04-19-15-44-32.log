@@ -1,0 +1,52 @@
+2022-04-19 15:44:32.500 | 6760      | INFO  | INIT with 6 workers.
+2022-04-19 15:44:32.500 | 6760      | INFO  | WORKER-1 RUN
+2022-04-19 15:44:32.501 | 6760      | INFO  | WORKER-2 RUN
+2022-04-19 15:44:32.501 | 14732     | INFO  | WORKER-1 START
+2022-04-19 15:44:32.501 | 6760      | INFO  | WORKER-3 RUN
+2022-04-19 15:44:32.501 | 20000     | INFO  | WORKER-2 START
+2022-04-19 15:44:32.501 | 6760      | INFO  | WORKER-4 RUN
+2022-04-19 15:44:32.502 | 8056      | INFO  | WORKER-3 START
+2022-04-19 15:44:32.502 | 6760      | INFO  | WORKER-5 RUN
+2022-04-19 15:44:32.502 | 9476      | INFO  | WORKER-4 START
+2022-04-19 15:44:32.502 | 6760      | INFO  | WORKER-6 RUN
+2022-04-19 15:44:32.502 | 5208      | INFO  | WORKER-5 START
+2022-04-19 15:44:32.502 | 14732     | INFO  |  new_service 16777217
+2022-04-19 15:44:32.502 | 17708     | INFO  | WORKER-6 START
+2022-04-19 15:44:32.502 | 6760      | INFO  | server::run() state = 2
+2022-04-19 15:44:32.511 | :01000001 | INFO  | start server	(main.lua:13)
+2022-04-19 15:44:32.511 | :01000001 | INFO  | [WORKER 1] new service [bootstrap]
+2022-04-19 15:44:32.511 | 14732     | INFO  |  new_service 16777218
+2022-04-19 15:44:32.517 | 14732     | ERROR | lua_service::init error:
+run service_gate.lua:13: attempt to index a nil value (global 'msend')
+stack traceback:
+	service_gate.lua:13: in main chunk,	 params: conf = table: 000002D9C9B381A0; moon = table: 000002D9C9B21700; socket = table: 000002D9C9B22080; seri = table: 000002D9C9B2BC20; json = table: 000002D9C9B2C060;(lua_service.cpp:109). (lua_service.cpp:124)
+2022-04-19 15:44:32.517 | :01000002 | INFO  | [WORKER 1] destroy service [gate1] 
+2022-04-19 15:44:32.517 | 20000     | INFO  |  new_service 33554433
+2022-04-19 15:44:32.519 | 20000     | ERROR | lua_service::init error:
+run service_gate.lua:13: attempt to index a nil value (global 'msend')
+stack traceback:
+	service_gate.lua:13: in main chunk,	 params: conf = table: 000002D9C9B91080; moon = table: 000002D9C9B93B00; socket = table: 000002D9C9B937C0; seri = table: 000002D9C9B93000; json = table: 000002D9C9B93300;(lua_service.cpp:109). (lua_service.cpp:124)
+2022-04-19 15:44:32.519 | :02000001 | INFO  | [WORKER 2] destroy service [gate2] 
+2022-04-19 15:44:32.519 | 8056      | INFO  |  new_service 50331649
+2022-04-19 15:44:32.521 | 8056      | ERROR | lua_service::init error:
+run service_gate.lua:13: attempt to index a nil value (global 'msend')
+stack traceback:
+	service_gate.lua:13: in main chunk,	 params: conf = table: 000002D9C9B92CC0; moon = table: 000002D9C9B5E2D0; socket = table: 000002D9C9B5A890; seri = table: 000002D9C9B91F40; json = table: 000002D9C9B92180;(lua_service.cpp:109). (lua_service.cpp:124)
+2022-04-19 15:44:32.521 | :03000001 | INFO  | [WORKER 3] destroy service [gate3] 
+2022-04-19 15:44:32.521 | 20000     | INFO  |  new_service 33554434
+2022-04-19 15:44:32.526 | :02000002 | INFO  | ingate server start	ingate1	127.0.0.1	20620	(service_ingate.lua:113)
+2022-04-19 15:44:32.526 | :02000002 | INFO  | [WORKER 2] new service [ingate1]
+2022-04-19 15:44:32.526 | 8056      | INFO  |  new_service 50331650
+2022-04-19 15:44:32.528 | :03000002 | INFO  | ingate server start	ingate2	127.0.0.1	20621	(service_ingate.lua:113)
+2022-04-19 15:44:32.528 | :03000002 | INFO  | [WORKER 3] new service [ingate2]
+2022-04-19 15:44:57.599 | 6760      | WARN  | Received signal code 100 (server.cpp:62)
+2022-04-19 15:44:57.599 | :02000002 | INFO  | [WORKER 2] destroy service [ingate1] 
+2022-04-19 15:44:57.599 | :03000002 | INFO  | [WORKER 3] destroy service [ingate2] 
+2022-04-19 15:44:57.599 | :01000001 | INFO  | [WORKER 1] destroy service [bootstrap] 
+2022-04-19 15:44:57.600 | 17708     | INFO  | WORKER-6 STOP
+2022-04-19 15:44:57.601 | 5208      | INFO  | WORKER-5 STOP
+2022-04-19 15:44:57.601 | 9476      | INFO  | WORKER-4 STOP
+2022-04-19 15:44:57.601 | 8056      | INFO  | WORKER-3 STOP
+2022-04-19 15:44:57.601 | 20000     | INFO  | WORKER-2 STOP
+2022-04-19 15:44:57.601 | 14732     | INFO  | WORKER-1 STOP
+2022-04-19 15:44:57.601 | 6760      | INFO  | STOP
